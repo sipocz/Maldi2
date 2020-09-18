@@ -128,6 +128,9 @@ def loadCSVfile(fname):
     return (l1)
 
 def createLogFile():
+    '''
+    meghatározza a msg fájl nevét
+    '''
     import datetime as dt
     from os import path as ospath
 
