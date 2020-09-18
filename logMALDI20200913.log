@@ -1,0 +1,400 @@
+2020-09-13 17:22:32.161481
+	DEF:  createLogFile
+		created
+2020-09-13 17:22:32.163482
+	DEF:  createResultFIleName
+		RESULT file created:wqerwetas_asfsaf_RESULT.csv
+2020-09-13 17:22:32.164482
+	DEF:  <module>
+		MALDI Converter Started
+2020-09-13 17:22:32.166482
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/IN/1011026779-2020-07-28 14-22-26.csv
+2020-09-13 17:22:32.167482
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/OUT2/20200728-1504-1011026779s-2020-07-28 14-22-26.csv
+2020-09-13 17:37:24.465518
+	DEF:  createResultFIleName
+		RESULT file created:wqerwetas_asfsaf_RESULT.csv
+2020-09-13 17:37:25.101555
+	DEF:  <module>
+		MALDI Converter Started
+2020-09-13 17:37:25.102555
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/IN/1011026779-2020-07-28 14-22-26.csv
+2020-09-13 17:37:25.104555
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/OUT2/20200728-1504-1011026779s-2020-07-28 14-22-26.csv
+2020-09-13 17:38:07.051954
+	DEF:  createResultFIleName
+		RESULT file created:wqerwetas_asfsaf_RESULT.csv
+2020-09-13 17:38:07.053954
+	DEF:  <module>
+		MALDI Converter Started
+2020-09-13 17:38:07.054954
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/IN/1011026779-2020-07-28 14-22-26.csv
+2020-09-13 17:38:07.056954
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/OUT2/20200810-1431-1011025858f-2020-08-10 13-33-45.csv
+2020-09-13 17:38:50.868460
+	DEF:  createResultFIleName
+		RESULT file created:wqerwetas_asfsaf_RESULT.csv
+2020-09-13 17:38:50.870460
+	DEF:  <module>
+		MALDI Converter Started
+2020-09-13 17:38:50.871460
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/IN/1011026779-2020-07-28 14-22-26.csv
+2020-09-13 17:38:50.873461
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/OUT2/20200810-1431-1011025858f-2020-08-10 13-33-45.csv
+2020-09-13 17:39:35.230998
+	DEF:  createResultFIleName
+		RESULT file created:wqerwetas_asfsaf_RESULT.csv
+2020-09-13 17:39:35.231998
+	DEF:  <module>
+		MALDI Converter Started
+2020-09-13 17:39:35.232998
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/IN/1011026779-2020-07-28 14-22-26.csv
+2020-09-13 17:39:35.234998
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/OUT2/20200811-1501-1011026779s-2020-08-11 14-28-46.csv
+2020-09-13 17:50:27.377298
+	DEF:  createResultFIleName
+		RESULT file created:wqerwetas_asfsaf_RESULT.csv
+2020-09-13 17:50:28.010334
+	DEF:  <module>
+		MALDI Converter Started
+2020-09-13 17:50:28.011335
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/IN/1011026779-2020-07-28 14-22-26.csv
+2020-09-13 17:50:28.013335
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/OUT2/20200811-1501-1011026779s-2020-08-11 14-28-46.csv
+2020-09-13 17:52:26.421107
+	DEF:  createResultFIleName
+		RESULT file created:wqerwetas_asfsaf_RESULT.csv
+2020-09-13 17:52:26.422107
+	DEF:  <module>
+		MALDI Converter Started
+2020-09-13 17:52:26.424107
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/IN/1011026779-2020-07-28 14-22-26.csv
+2020-09-13 17:52:26.425107
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/OUT2/20200811-1501-1011026779s-2020-08-11 14-28-46.csv
+2020-09-13 17:52:40.650921
+	DEF:  createResultFIleName
+		RESULT file created:wqerwetas_asfsaf_RESULT.csv
+2020-09-13 17:52:40.652921
+	DEF:  <module>
+		MALDI Converter Started
+2020-09-13 17:52:40.653921
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/IN/1011026779-2020-07-28 14-22-26.csv
+2020-09-13 17:52:40.655921
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/OUT2/20200811-1501-1011026779s-2020-08-11 14-28-46.csv
+2020-09-13 17:53:41.327392
+	DEF:  createResultFIleName
+		RESULT file created:wqerwetas_asfsaf_RESULT.csv
+2020-09-13 17:53:41.328392
+	DEF:  <module>
+		MALDI Converter Started
+2020-09-13 17:53:41.330392
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/IN/1011026779-2020-07-28 14-22-26.csv
+2020-09-13 17:53:41.331392
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/OUT2/20200811-1501-1011026779s-2020-08-11 14-28-46.csv
+2020-09-13 17:55:06.335254
+	DEF:  createResultFIleName
+		RESULT file created:wqerwetas_asfsaf_RESULT.csv
+2020-09-13 17:55:06.337254
+	DEF:  <module>
+		MALDI Converter Started
+2020-09-13 17:55:06.338254
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/IN/1011026779-2020-07-28 14-22-26.csv
+2020-09-13 17:55:06.340254
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/OUT2/20200811-1501-1011026779s-2020-08-11 14-28-46.csv
+2020-09-13 17:55:22.478177
+	DEF:  createResultFIleName
+		RESULT file created:wqerwetas_asfsaf_RESULT.csv
+2020-09-13 17:55:22.480177
+	DEF:  <module>
+		MALDI Converter Started
+2020-09-13 17:55:22.481177
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/IN/1011026779-2020-07-28 14-22-26.csv
+2020-09-13 17:55:22.482177
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/OUT2/20200811-1501-1011026779s-2020-08-11 14-28-46.csv
+2020-09-13 17:56:51.887291
+	DEF:  createResultFIleName
+		RESULT file created:wqerwetas_asfsaf_RESULT.csv
+2020-09-13 17:56:51.888291
+	DEF:  <module>
+		MALDI Converter Started
+2020-09-13 17:56:51.890291
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/IN/1011026779-2020-07-28 14-22-26.csv
+2020-09-13 17:56:51.891291
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/OUT2/20200811-1501-1011026779s-2020-08-11 14-28-46.csv
+2020-09-13 18:10:25.045801
+	DEF:  createResultFIleName
+		RESULT file created:wqerwetas_asfsaf_RESULT.csv
+2020-09-13 18:10:25.679837
+	DEF:  <module>
+		MALDI Converter Started
+2020-09-13 18:10:25.680837
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/IN/1011026779-2020-07-28 14-22-26.csv
+2020-09-13 18:10:25.682837
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/OUT2/20200811-1501-1011026779s-2020-08-11 14-28-46.csv
+2020-09-13 18:20:40.176984
+	DEF:  createResultFIleName
+		RESULT file created:wqerwetas_asfsaf_RESULT.csv
+2020-09-13 18:20:40.852023
+	DEF:  <module>
+		MALDI Converter Started
+2020-09-13 18:20:40.854023
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/IN/1011026779-2020-07-28 14-22-26.csv
+2020-09-13 18:20:40.856023
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/OUT2/20200811-1501-1011026779s-2020-08-11 14-28-46.csv
+2020-09-13 18:38:54.708588
+	DEF:  createResultFIleName
+		RESULT file created:wqerwetas_asfsaf_RESULT.csv
+2020-09-13 18:38:55.382627
+	DEF:  <module>
+		MALDI Converter Started
+2020-09-13 18:38:55.383627
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/IN/1011026779-2020-07-28 14-22-26.csv
+2020-09-13 18:38:55.385627
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/OUT2/20200811-1501-1011026779s-2020-08-11 14-28-46.csv
+2020-09-13 18:39:06.939288
+	DEF:  createResultFIleName
+		RESULT file created:wqerwetas_asfsaf_RESULT.csv
+2020-09-13 18:39:06.940288
+	DEF:  <module>
+		MALDI Converter Started
+2020-09-13 18:39:06.942288
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/IN/1011026779-2020-07-28 14-22-26.csv
+2020-09-13 18:39:06.943288
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/OUT2/20200811-1501-1011026779s-2020-08-11 14-28-46.csv
+2020-09-13 18:39:33.316796
+	DEF:  createResultFIleName
+		RESULT file created:wqerwetas_asfsaf_RESULT.csv
+2020-09-13 18:39:33.318796
+	DEF:  <module>
+		MALDI Converter Started
+2020-09-13 18:39:33.319797
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/IN/1011026779-2020-07-28 14-22-26.csv
+2020-09-13 18:39:33.321797
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/OUT2/20200811-1501-1011026779s-2020-08-11 14-28-46.csv
+2020-09-13 18:39:49.721735
+	DEF:  createResultFIleName
+		RESULT file created:wqerwetas_asfsaf_RESULT.csv
+2020-09-13 18:39:49.723735
+	DEF:  <module>
+		MALDI Converter Started
+2020-09-13 18:39:49.724735
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/IN/1011026779-2020-07-28 14-22-26.csv
+2020-09-13 18:39:49.725735
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/OUT2/20200811-1501-1011026779s-2020-08-11 14-28-46.csv
+2020-09-13 18:39:49.729735
+	DEF:  findMatchInOutFile
+2020-09-13 18:41:14.294572
+	DEF:  createResultFIleName
+		RESULT file created:wqerwetas_asfsaf_RESULT.csv
+2020-09-13 18:41:14.296572
+	DEF:  <module>
+		MALDI Converter Started
+2020-09-13 18:41:14.297572
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/IN/1011026779-2020-07-28 14-22-26.csv
+2020-09-13 18:41:14.299572
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/OUT2/20200811-1501-1011026779s-2020-08-11 14-28-46.csv
+2020-09-13 18:41:14.302572
+	DEF:  findMatchInOutFile
+2020-09-13 18:41:28.707396
+	DEF:  createResultFIleName
+		RESULT file created:wqerwetas_asfsaf_RESULT.csv
+2020-09-13 18:41:28.709396
+	DEF:  <module>
+		MALDI Converter Started
+2020-09-13 18:41:28.710397
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/IN/1011026779-2020-07-28 14-22-26.csv
+2020-09-13 18:41:28.712397
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/OUT2/20200811-1501-1011026779s-2020-08-11 14-28-46.csv
+2020-09-13 18:41:28.715397
+	DEF:  findMatchInOutFile
+2020-09-13 18:47:47.219046
+	DEF:  createResultFIleName
+		RESULT file created:wqerwetas_asfsaf_RESULT.csv
+2020-09-13 18:47:47.657071
+	DEF:  <module>
+		MALDI Converter Started
+2020-09-13 18:47:47.658071
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/IN/1011026779-2020-07-28 14-22-26.csv
+2020-09-13 18:47:47.660071
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/OUT2/20200811-1501-1011026779s-2020-08-11 14-28-46.csv
+2020-09-13 18:47:47.664071
+	DEF:  findMatchInOutFile
+2020-09-13 18:50:24.567046
+	DEF:  createResultFIleName
+		RESULT file created:wqerwetas_asfsaf_RESULT.csv
+2020-09-13 18:50:24.569046
+	DEF:  <module>
+		MALDI Converter Started
+2020-09-13 18:50:24.570046
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/IN/1011026779-2020-07-28 14-22-26.csv
+2020-09-13 18:50:24.572046
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/OUT2/20200811-1501-1011026779s-2020-08-11 14-28-46.csv
+2020-09-13 18:50:24.575046
+	DEF:  findMatchInOutFile
+2020-09-13 18:52:21.875755
+	DEF:  createResultFIleName
+		RESULT file created:wqerwetas_asfsaf_RESULT.csv
+2020-09-13 18:52:21.876755
+	DEF:  <module>
+		MALDI Converter Started
+2020-09-13 18:52:21.878756
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/IN/1011026779-2020-07-28 14-22-26.csv
+2020-09-13 18:52:21.879756
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/OUT2/20200811-1501-1011026779s-2020-08-11 14-28-46.csv
+2020-09-13 18:52:21.883756
+	DEF:  findMatchInOutFile
+2020-09-13 18:52:57.459791
+	DEF:  createResultFIleName
+		RESULT file created:wqerwetas_asfsaf_RESULT.csv
+2020-09-13 18:52:57.460791
+	DEF:  <module>
+		MALDI Converter Started
+2020-09-13 18:52:57.462791
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/IN/1011026779-2020-07-28 14-22-26.csv
+2020-09-13 18:52:57.463791
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/OUT2/20200811-1501-1011026779s-2020-08-11 14-28-46.csv
+2020-09-13 18:52:57.467791
+	DEF:  findMatchInOutFile
+2020-09-13 18:54:41.734755
+	DEF:  createResultFIleName
+		RESULT file created:wqerwetas_asfsaf_RESULT.csv
+2020-09-13 18:54:41.736755
+	DEF:  <module>
+		MALDI Converter Started
+2020-09-13 18:54:41.737755
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/IN/1011026779-2020-07-28 14-22-26.csv
+2020-09-13 18:54:41.739755
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/OUT2/20200811-1501-1011026779s-2020-08-11 14-28-46.csv
+2020-09-13 18:54:41.743755
+	DEF:  findMatchInOutFile
+2020-09-13 18:55:32.177640
+	DEF:  createResultFIleName
+		RESULT file created:wqerwetas_asfsaf_RESULT.csv
+2020-09-13 18:55:32.179640
+	DEF:  <module>
+		MALDI Converter Started
+2020-09-13 18:55:32.180640
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/IN/1011026779-2020-07-28 14-22-26.csv
+2020-09-13 18:55:32.182640
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/OUT2/20200811-1501-1011026779s-2020-08-11 14-28-46.csv
+2020-09-13 18:55:32.186641
+	DEF:  findMatchInOutFile
+2020-09-13 18:55:49.281618
+	DEF:  createResultFIleName
+		RESULT file created:wqerwetas_asfsaf_RESULT.csv
+2020-09-13 18:55:49.282618
+	DEF:  <module>
+		MALDI Converter Started
+2020-09-13 18:55:49.284619
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/IN/1011026779-2020-07-28 14-22-26.csv
+2020-09-13 18:55:49.285619
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/OUT2/20200811-1501-1011026779s-2020-08-11 14-28-46.csv
+2020-09-13 18:55:49.289619
+	DEF:  findMatchInOutFile
+		match:  1011026779-2020-08-11 14-28-46.csv_AND_ 20200811-1501-1011026779f-2020-08-11 14-28-46.csv
+		match:  1011026779-2020-08-11 14-28-46.csv_AND_ 20200811-1501-1011026779s-2020-08-11 14-28-46.csv
+2020-09-13 18:57:09.441203
+	DEF:  createResultFIleName
+		RESULT file created:wqerwetas_asfsaf_RESULT.csv
+2020-09-13 18:57:09.442203
+	DEF:  <module>
+		MALDI Converter Started
+2020-09-13 18:57:09.444203
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/IN/1011026779-2020-07-28 14-22-26.csv
+2020-09-13 18:57:09.445203
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/OUT2/20200811-1501-1011026779s-2020-08-11 14-28-46.csv
+2020-09-13 18:57:09.449204
+	DEF:  findMatchInOutFile
+		match:  1011026779-2020-08-11 14-28-46.csv_AND_ 20200811-1501-1011026779f-2020-08-11 14-28-46.csv
+		match:  1011026779-2020-08-11 14-28-46.csv_AND_ 20200811-1501-1011026779s-2020-08-11 14-28-46.csv
+2020-09-13 18:59:17.787544
+	DEF:  createResultFIleName
+		RESULT file created:wqerwetas_asfsaf_RESULT.csv
+2020-09-13 18:59:17.789544
+	DEF:  <module>
+		MALDI Converter Started
+2020-09-13 18:59:17.790544
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/IN/1011026779-2020-07-28 14-22-26.csv
+2020-09-13 18:59:17.792545
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/OUT2/20200811-1501-1011026779s-2020-08-11 14-28-46.csv
+2020-09-13 18:59:17.796545
+	DEF:  findMatchInOutFile
+		match:  1011026779-2020-08-11 14-28-46.csv_AND_ 20200811-1501-1011026779f-2020-08-11 14-28-46.csv
+		match:  1011026779-2020-08-11 14-28-46.csv_AND_ 20200811-1501-1011026779s-2020-08-11 14-28-46.csv
+2020-09-13 18:59:34.081476
+	DEF:  createResultFIleName
+		RESULT file created:wqerwetas_asfsaf_RESULT.csv
+2020-09-13 18:59:34.082476
+	DEF:  <module>
+		MALDI Converter Started
+2020-09-13 18:59:34.083476
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/IN/1011026779-2020-07-28 14-22-26.csv
+2020-09-13 18:59:34.085476
+	DEF:  loadCSVfile
+		filename:C:/Space/maldi2/OUT2/20200811-1501-1011026779s-2020-08-11 14-28-46.csv
+2020-09-13 18:59:34.089477
+	DEF:  findMatchInOutFile
+		match:  1011026779-2020-08-11 14-28-46.csv_AND_ 20200811-1501-1011026779f-2020-08-11 14-28-46.csv
+		match:  1011026779-2020-08-11 14-28-46.csv_AND_ 20200811-1501-1011026779s-2020-08-11 14-28-46.csv
+2020-09-13 18:59:41.816919
+	DEF:  createResultFIleName
+		RESULT file created:wqerwetas_asfsaf_RESULT.csv
