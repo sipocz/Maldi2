@@ -115,6 +115,7 @@ def loadCSVfile(fname):
     '''
     csv fálj betöltése egy listába
     param fname: a fájl neve teljes elérési út
+    :return: listában adja vissza a file tartalmát
     '''
     msg()
     msg("filename:"+fname)
@@ -128,6 +129,7 @@ def loadCSVfile(fname):
 def createLogFile():
     '''
     meghatározza a msg fájl nevét
+    :return: a Log file neve stringként
     '''
     import datetime as dt
     from os import path as ospath
@@ -209,6 +211,7 @@ def splitInfiles(fnamelist):
 def listoutfiles():
     '''
     OUT könyvtár elemeit listázza
+    :return: listába rendezett fálnevek
     '''
     f = []
     for (dirpath, dirnames, filenames) in os.walk(_DirectoryOut):
@@ -218,6 +221,7 @@ def listoutfiles():
 def listinfiles():
     '''
     IN könyvtár elemeit listázza
+    :return: listába rendezett fálnevek
     '''
     f = []
     for (dirpath, dirnames, filenames) in os.walk(_DirectoryIn):
@@ -229,6 +233,7 @@ def listinfiles():
 def findMatchInOutFile():
     '''
     név alapján összekapcsolja az IN és OUT könyvtárban lévő fájlokat
+    :return: listában adja vissza az egymáshoz tartozó fájlokat
     '''
     out={}
     inlist=listinfiles()
