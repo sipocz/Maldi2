@@ -79,10 +79,10 @@ def msg(msgstr="",tofile=True):
         if tofile:
             filename = createLogFile()
             fname=open(filename, "a")
-            print("\t\t"+caller+msgstr,file=fname)
+            print("\t\t"+caller+"-"+msgstr,file=fname)
             fname.close()
         else:
-            print("\t\t" +caller+msgstr)
+            print("\t\t" +caller+"-"+msgstr)
 
 
 def parseCSV(str):
