@@ -16,7 +16,6 @@ _ResultEnd = "_RESULT_X"
 # END OF GLOBAL VARIABLES
 
 
-
 def searchfiles(outFileName, extension='.ttf', folder='C:\\', deltaTime=3600 * 24):
     """
     ***************************
@@ -45,7 +44,6 @@ def searchfiles(outFileName, extension='.ttf', folder='C:\\', deltaTime=3600 * 2
                         filewrite.write(f"{fname}\n")
 
 
-
 def timestamp():
     '''
     Az aktuális időpontot adja vissza string formában YYYY-MM-DD HH-MM-SS.xxxxxx
@@ -56,11 +54,8 @@ def timestamp():
     return (n)
 
 
-
-
 def msg(msgstr="",tofile=True):
     '''
-
     :param msgstr: kiírandó szöveg
     :param tofile: alapértelmezett True esetén fájba ír, átírva standard kimenet
     :return:
@@ -100,18 +95,11 @@ def parseCSV(str):
     a = str.strip().split(";")
     return (a)
 
-
 #e8 = u.encode('utf-8')        # encode without BOM
 #e8s = u.encode('utf-8-sig')   # encode with BOM
 #e16 = u.encode('utf-16')      # encode with BOM
 #e16le = u.encode('utf-16le')  # encode without BOM
 #e16be = u.encode('utf-16be')  # encode without BOM
-
-
-
-
-
-
 
 
 def loadCSVfile(fname):
@@ -129,6 +117,7 @@ def loadCSVfile(fname):
     csvfile.close()
     return (l1)
 
+
 def createLogFile():
     '''
     meghatározza a msg fájl nevét
@@ -136,7 +125,6 @@ def createLogFile():
     '''
     import datetime as dt
     from os import path as ospath
-
     currentdate=dt.datetime.now()
     isostr=currentdate.isoformat()
     datestr="/"+_swname+str(isostr[0:4])+str(isostr[5:7])+str(isostr[8:10])
@@ -150,6 +138,7 @@ def createLogFile():
         msg(tofile=_DebugToFile)
         msg("created",tofile=_DebugToFile)
     return (fname)
+
 
 def createResultFileName(filename):
     '''
@@ -165,9 +154,6 @@ def createResultFileName(filename):
     out=fname[0]+_ResultEnd+"."+"csv"
     msg("RESULT file name created:"+out)
     return(out)
-
-
-
 
 
 def splitOutfile(fname):
