@@ -44,6 +44,9 @@ def searchfiles(outFileName, extension='.ttf', folder='C:\\', deltaTime=3600 * 2
 
 
 def timestamp():
+    '''
+    Az aktuális időpontot adja vissza string formában YYYY-MM-DD HH-MM-SS.xxxxxx
+    '''
     n = dt.datetime.now()
     n.isoformat(" ", "seconds")
     # print(n)
