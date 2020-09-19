@@ -61,8 +61,9 @@ def msg(msgstr="",tofile=True):
     :return:
     '''
     import sys
+    caller=sys._getframe(1).f_code.co_name
     if msgstr=="":
-        caller=sys._getframe(1).f_code.co_name
+        
         if tofile:
 
             filename=createLogFile()
@@ -78,10 +79,10 @@ def msg(msgstr="",tofile=True):
         if tofile:
             filename = createLogFile()
             fname=open(filename, "a")
-            print("\t\t"+msgstr,file=fname)
+            print("\t\t"+caller+msgstr,file=fname)
             fname.close()
         else:
-            print("\t\t" + msgstr)
+            print("\t\t" +caller+msgstr)
 
 
 def parseCSV(str):
@@ -185,11 +186,11 @@ def splitInfile(fname):
     :param fname: szétkapja a MALDI INPUT file nevet
     :return:  a kulcs és a fájl neve listában
     '''
-    msg(tofile=_DebugToFile)
+    msg("",tofile=_DebugToFile)
     fname_list=fname.split(".")
     fname_1=fname_list[0]
     parts=fname_1.split("-",1)
-    msg("return: "+str([parts[0],parts[1],fname]), tofile=_DebugToFile)
+    msg("return a split: "+str([parts[0],parts[1],fname]), tofile=_DebugToFile)
     return([parts[0],parts[1],fname])
 
 
