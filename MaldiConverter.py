@@ -294,7 +294,11 @@ def runacheck():
     '''
     Elvégezzük az ellenőrzést 
     '''
+    msg(tofile=_DebugToFile)
     matched=findMatchInOutFile()
+    if len(matched)==0:
+        msg("No Match Found: ", tofile=_DebugToFile)
+    #print ( matched)
     for afile in matched:
         #print(afile)
         sfileok = False
@@ -351,5 +355,5 @@ def runacheck():
 msg(tofile=_DebugToFile)
 msg("MALDI Converter Started",tofile=_DebugToFile)
 findMatchInOutFile()
-#print("*******************")
+print("*******************")
 runacheck()
