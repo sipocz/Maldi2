@@ -378,7 +378,7 @@ def runacheck():
             
             #print("result:", result)
             resultlist.append([id,result[3],result[6]])
-            print("eddig eljutottunk")
+            #print("eddig eljutottunk")
         resultfilename=createResultFileName(afile)
         print(resultfilename)
         #print(resultlist)
@@ -394,7 +394,12 @@ def runacheck():
         
         print(infilename,_BackupIN)
         shutil.move(infilename,_BackupIN)    
-            
+        #result file backup
+        resultfilefullname=_DirectoryResult+"/"+resultfilename
+        shutil.move(resultfilefullname,_Backupresult) 
+         
+         
+        
 
 
 
