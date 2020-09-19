@@ -19,11 +19,15 @@ DIRECTORY definitions
 
 _Basedirectory="C:/Space/maldi2"
 _Tmpdirectory="C:/Space/maldiTMP"
-_Backupdireectory="C:/Space/MaldiBCKP"
+_Backupdirectory="C:/Space/MaldiBCKP"
 _Indirectory="/IN"
 _Resultdirectory="/RESULT"
 _Outdirectory="/OUT2"
 _Logdirectory="/log"
+_BackupIN=_Backupdirectory+_Indirectory
+_BackupOUT=_Backupdirectory+_Outdirectory
+_Backupresult=_Backupdirectory+_Resultdirectory
+
 
 _DirectoryIn=_Basedirectory+_Indirectory
 _DirectoryResult=_Basedirectory+_Resultdirectory
@@ -314,7 +318,7 @@ def runacheck():
     matched=findMatchInOutFile()
     if len(matched)==0:
         msg("No Match Found: ", tofile=_DebugToFile)
-    #print ( matched)
+    print ( matched)
     for afile in matched:
         #print(afile)
         sfileok = False
@@ -336,10 +340,12 @@ def runacheck():
             sfile=loadCSVfile(sfilename)
         if  ffileok:
             ffile=loadCSVfile(ffilename)
+        infilename=_DirectoryIn+"/"+afile
         #print(infile)
         #print(sfile)
         #print(ffile)
-        infile=loadCSVfile(_DirectoryIn+"/"+afile)
+
+        infile=loadCSVfile(infilename)
         #print(infile)
         #print("----------------------")
         resultlist=[]
@@ -361,6 +367,17 @@ def runacheck():
         #print(resultfilename)
         #print(resultlist)
         writeResultFile(resultfilename,resultlist)
+        # file movement after RESULT generatiom
+        #  
+        #shutil.move()
+        print(infilename, sfilename,ffilename)  
+        if sfileok:
+            shutil.move(sfilename,_BackupOUT)
+        if ffileok:
+            shutil.move(ffilename,_BackupOUT)
+        shutil.move(infilename,_BackupIN)    
+            
+
 
 
 '''
