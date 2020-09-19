@@ -3,17 +3,33 @@ import os
 import shutil
 import datetime as dt
 import re
-''' GLOBAL variables
+
+
 '''
-_DirectoryIn="C:/Space/maldi2/IN"
-_DirectoryResult="C:/Space/maldi2/RESULT"
-_DirectoryOut="C:/Space/maldi2/OUT2"
-_DebugToFile=True
-_logprefix = "C:/Space/maldi2/log"
+GLOBAL CONSTANT definitions
+'''
 _logext = ".log"
 _swname = "MALDI"
 _ResultEnd = "_RESULT_X"
-# END OF GLOBAL VARIABLES
+
+
+'''
+DIRECTORY definitions
+'''
+
+_Basedirectory="C:/Space/maldi2"
+_Tmpdirectory="C:/Space/maldiTMP"
+_Backupdireectory="C:/Space/MaldiBCKP"
+_Indirectory="/IN"
+_Resultdirectory="/RESULT"
+_Outdirectory="/OUT2"
+_Logdirectory="/log"
+
+_DirectoryIn=_Basedirectory+_Indirectory
+_DirectoryResult=_Basedirectory+_Resultdirectory
+_DirectoryOut=_Basedirectory+_Outdirectory
+_DebugToFile=True
+_logprefix = _Basedirectory+_Logdirectory
 
 
 def searchfiles(outFileName, extension='.ttf', folder='C:\\', deltaTime=3600 * 24):
