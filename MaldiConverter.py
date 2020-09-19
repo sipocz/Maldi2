@@ -179,6 +179,7 @@ def splitOutfiles(fnamelist):
     msg("return: "+str(out), tofile=_DebugToFile)
     return(out)
 
+
 def splitInfile(fname):
     '''
     :param fname: szétkapja a MALDI INPUT file nevet
