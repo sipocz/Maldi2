@@ -234,7 +234,7 @@ def listoutfiles():
     '''
     msg(tofile=_DebugToFile)
     f = []
-    for (dirpath, dirnames, filenames) in os.walk(_DirectoryOut):
+    for (_, _, filenames) in os.walk(_DirectoryOut):
         f.extend(filenames)
     msg("return: "+str(f), tofile=_DebugToFile)
     return(f)
@@ -247,7 +247,7 @@ def listinfiles():
     '''
     msg(tofile=_DebugToFile)
     f = []
-    for (dirpath, dirnames, filenames) in os.walk(_DirectoryIn):
+    for (_, _, filenames) in os.walk(_DirectoryIn):
         f.extend(filenames)
     msg("return: "+str(f), tofile=_DebugToFile)
     return(f)
@@ -346,35 +346,53 @@ def runacheck():
         #print(ffile)
 
         infile=loadCSVfile(infilename)
-        #print(infile)
+        print("infile: ",infile)
         #print("----------------------")
         resultlist=[]
         for line in infile:
+            print("line: ", line)
             id=line[1]
+            fungi=line[5]
             #print(id)
             #check in f file
             #print(id)
-            frow=checkInLine(id,ffile,0)
+            frow=None
+            #print(ffile)
+            print(sfilename)
+            
+            if ffileok:
+                frow=checkInLine(id,ffile,0)
+            
             srow=checkInLine(id,sfile,0)
-            if frow==None :
+            #print("srow:",srow)
+            #print("ffileok: ", ffileok)
+            if ffileok==False:
                 #print(srow)
                 result=srow
-            else:
+            else:     # ha van f file
                 #print(frow)
-                result=frow
+                if fungi=="TYMC":
+                    result=frow
+                else:
+                    result=srow
+            
+            #print("result:", result)
             resultlist.append([id,result[3],result[6]])
+            print("eddig eljutottunk")
         resultfilename=createResultFileName(afile)
-        #print(resultfilename)
+        print(resultfilename)
         #print(resultlist)
         writeResultFile(resultfilename,resultlist)
         # file movement after RESULT generatiom
         #  
         #shutil.move()
-        print(infilename, sfilename,ffilename)  
+        #print(infilename, sfilename,ffilename)  
         if sfileok:
             shutil.move(sfilename,_BackupOUT)
         if ffileok:
             shutil.move(ffilename,_BackupOUT)
+        
+        print(infilename,_BackupIN)
         shutil.move(infilename,_BackupIN)    
             
 
