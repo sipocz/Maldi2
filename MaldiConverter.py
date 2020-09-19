@@ -341,8 +341,6 @@ def runacheck():
 
 msg(tofile=_DebugToFile)
 msg("MALDI Converter Started",tofile=_DebugToFile)
-
-
 findMatchInOutFile()
 #print("*******************")
 runacheck()
