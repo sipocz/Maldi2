@@ -186,9 +186,11 @@ def splitOutfiles(fnamelist):
     :param fnamelist: a könyvtár fájljai listába szedve
     :return:  teljes listát generál a kulccsal
     '''
+    msg(tofile=_DebugToFile)
     out=[]
     for fname in fnamelist:
         out.append(splitOutfile(fname))
+    msg("return: "+str(out), tofile=_DebugToFile)
     return(out)
 
 def splitInfile(fname):
@@ -196,9 +198,11 @@ def splitInfile(fname):
     :param fname: szétkapja a MALDI INPUT file nevet
     :return:  a kulcs és a fájl neve listában
     '''
+    msg(tofile=_DebugToFile)
     fname_list=fname.split(".")
     fname_1=fname_list[0]
     parts=fname_1.split("-",1)
+    msg("return: "+str([parts[0],parts[1],fname]), tofile=_DebugToFile)
     return([parts[0],parts[1],fname])
 
 def splitInfiles(fnamelist):
@@ -206,9 +210,11 @@ def splitInfiles(fnamelist):
     :param fnamelist: a könyvtár fájljai listába szedve
     :return:  teljes listát generál a kulccsal
     '''
+    msg(tofile=_DebugToFile)
     out=[]
     for fname in fnamelist:
         out.append(splitInfile(fname))
+    msg("return: "+str(out), tofile=_DebugToFile)
     return(out)
 
 def listoutfiles():
@@ -216,9 +222,11 @@ def listoutfiles():
     OUT könyvtár elemeit listázza
     :return: listába rendezett fálnevek
     '''
+    msg(tofile=_DebugToFile)
     f = []
     for (dirpath, dirnames, filenames) in os.walk(_DirectoryOut):
         f.extend(filenames)
+    msg("return: "+str(f), tofile=_DebugToFile)
     return(f)
 
 def listinfiles():
@@ -226,9 +234,11 @@ def listinfiles():
     IN könyvtár elemeit listázza
     :return: listába rendezett fálnevek
     '''
+    msg(tofile=_DebugToFile)
     f = []
     for (dirpath, dirnames, filenames) in os.walk(_DirectoryIn):
         f.extend(filenames)
+    msg("return: "+str(f), tofile=_DebugToFile)
     return(f)
 
 
@@ -247,7 +257,7 @@ def findMatchInOutFile():
     for infile in inlist:
         for outfile in outlist:
             if (splitInfile(infile)[0] in splitOutfile(outfile)[0]) and (splitInfile(infile)[1] in splitOutfile(outfile)[1]):
-                msg("match:  "+infile+" _AND_  "+outfile,tofile=_DebugToFile)
+                msg("match:  "+infile+" _AND_ "+outfile,tofile=_DebugToFile)
                 # tároljuk be az infókat
                 if infile not in out:
                     out[infile]=[outfile]
@@ -290,7 +300,7 @@ def writeResultFile(fname,reslist):
 
 def runacheck():
     '''
-    Elvégzis az ellenőrzést 
+    Elvégezzük az ellenőrzést 
     '''
     matched=findMatchInOutFile()
     for afile in matched:
