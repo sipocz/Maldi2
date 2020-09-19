@@ -207,12 +207,18 @@ def splitInfiles(fnamelist):
     return(out)
 
 def listoutfiles():
+    '''
+    OUT könyvtár elemeit listázza
+    '''
     f = []
     for (dirpath, dirnames, filenames) in os.walk(_DirectoryOut):
         f.extend(filenames)
     return(f)
 
 def listinfiles():
+    '''
+    IN könyvtár elemeit listázza
+    '''
     f = []
     for (dirpath, dirnames, filenames) in os.walk(_DirectoryIn):
         f.extend(filenames)
@@ -221,6 +227,9 @@ def listinfiles():
 
 
 def findMatchInOutFile():
+    '''
+    név alapján összekapcsolja az IN és OUT könyvtárban lévő fájlokat
+    '''
     out={}
     inlist=listinfiles()
     outlist=listoutfiles()
@@ -272,6 +281,9 @@ def writeResultFile(fname,reslist):
 
 
 def runacheck():
+    '''
+    Elvégzis az ellenőrzést 
+    '''
     matched=findMatchInOutFile()
     for afile in matched:
         #print(afile)
@@ -329,35 +341,6 @@ def runacheck():
 
 msg(tofile=_DebugToFile)
 msg("MALDI Converter Started",tofile=_DebugToFile)
-filename="1011026779-2020-07-28 14-22-26.csv"
-
-fin_name=_DirectoryIn+"/"+filename
-fin=loadCSVfile(fin_name)
-#print(fin)
-
-'''
-    for f in fin:
-        print(f[1])
-    
-    print("-------------------------------------------------------------------------------")
-  '''
-
-filename="20200811-1501-1011026779s-2020-08-11 14-28-46.csv"
-fout_name=_DirectoryOut+"/"+filename
-fout=loadCSVfile(fout_name)
-#print(fout)
-'''
-for f in fout:
-    print(f[0])
-  '''
-for codein in fin:
-    for codeout in fout:
-        if codein[1]==codeout[0]:
-            print(codein[1],";",codeout[3],";",codeout[6], sep="")
-outfiles=listoutfiles()
-#print(splitOutfiles(outfiles))
-outfiles=listinfiles()
-#print(splitInfiles(outfiles))
 
 
 findMatchInOutFile()
