@@ -109,9 +109,15 @@ def parseCSV(str):
 
 
 
-def saveCSVfile(a, fname):
+def saveCSVfile(alist, fname):
+    '''
+    alist tartalmát fname nevő fájlba menti csv formátumban
+    :param: alist:  a kiírandó python list
+    :param fname: a készítendő file neve 
+    '''
+
     csvfile = open(fname, "w",encoding='utf-8-sig')
-    for i in a:
+    for i in alist:
         s = ""
         for j in i:
             s = s + str(j) + ";"
