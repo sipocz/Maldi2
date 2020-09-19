@@ -191,6 +191,7 @@ def splitInfile(fname):
     msg("return: "+str([parts[0],parts[1],fname]), tofile=_DebugToFile)
     return([parts[0],parts[1],fname])
 
+
 def splitInfiles(fnamelist):
     '''
     :param fnamelist: a könyvtár fájljai listába szedve
@@ -202,6 +203,7 @@ def splitInfiles(fnamelist):
         out.append(splitInfile(fname))
     msg("return: "+str(out), tofile=_DebugToFile)
     return(out)
+
 
 def listoutfiles():
     '''
@@ -215,6 +217,7 @@ def listoutfiles():
     msg("return: "+str(f), tofile=_DebugToFile)
     return(f)
 
+
 def listinfiles():
     '''
     IN könyvtár elemeit listázza
@@ -226,7 +229,6 @@ def listinfiles():
         f.extend(filenames)
     msg("return: "+str(f), tofile=_DebugToFile)
     return(f)
-
 
 
 def findMatchInOutFile():
@@ -252,6 +254,7 @@ def findMatchInOutFile():
     msg("return: "+str(out), tofile=_DebugToFile)
     return(out)
 
+
 def checkInLine(key, list,column):
     '''
     kulcsot keres egy listában
@@ -267,6 +270,7 @@ def checkInLine(key, list,column):
         else:
             pass
     return (None)
+
 
 def writeResultFile(fname,reslist):
     '''
@@ -337,11 +341,10 @@ def runacheck():
         writeResultFile(resultfilename,resultlist)
 
 
-
-
 '''
  MAIN
 '''
+
 
 msg(tofile=_DebugToFile)
 msg("MALDI Converter Started",tofile=_DebugToFile)
