@@ -28,7 +28,7 @@ def searchfiles(outFileName, extension='.ttf', folder='C:\\', deltaTime=3600 * 2
     :return: ---
     """
     "Create a txt file with all the file of a type"
-    currentDateTimeStamp = datetime.datetime.now().timestamp()
+    currentDateTimeStamp = dt.datetime.now().timestamp()
     # print (currentDateTimeStamp)
     with open(outFileName, "w", encoding="utf-8") as filewrite:
         for r, d, f in os.walk(folder):
@@ -121,6 +121,10 @@ def saveCSVfile(a, fname):
     csvfile.close()
 
 def loadCSVfile(fname):
+    '''
+    csv fálj betöltése egy listába
+    param fname: a fájl neve teljes elérési út
+    '''
     msg()
     msg("filename:"+fname)
     l1=[]
@@ -262,8 +266,8 @@ def checkInLine(key, list,column):
 
 def writeResultFile(fname,reslist):
     '''
-
-    :param fname: a készítendő file neve, a könyvtárnevet a program hozzárakja
+    Létrehozza az eredményfájlt
+    :param fname: a készítendő file neve, a könyvtárnévvel automatikusan kiegészítésre kerül
     :param reslist: lista a file elemeiről
     :return:  None
     '''
