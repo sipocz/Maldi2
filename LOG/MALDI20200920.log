@@ -20912,3 +20912,195 @@
 2020-09-20 16:14:07.189963
 	DEF:  createResultFileName
 		createResultFileName-RESULT file name created:1011026779-2020-08-11 14-28-46_RESULT_X.csv
+2020-09-20 19:19:45.403032
+	DEF:  <module>
+		<module>-MALDI Converter Started
+2020-09-20 19:19:45.429034
+	DEF:  listinfiles
+		listinfiles-return: []
+2020-09-20 19:19:45.431034
+	DEF:  listoutfiles
+		listoutfiles-return: []
+2020-09-20 19:19:45.432034
+	DEF:  findMatchInOutFile
+		findMatchInOutFile-return: {}
+2020-09-20 19:19:45.433034
+	DEF:  runacheck
+2020-09-20 19:19:45.434034
+	DEF:  listinfiles
+		listinfiles-return: []
+2020-09-20 19:19:45.436034
+	DEF:  listoutfiles
+		listoutfiles-return: []
+2020-09-20 19:19:45.437034
+	DEF:  findMatchInOutFile
+		findMatchInOutFile-return: {}
+		runacheck-No Match Found: 
+2020-09-20 19:19:51.983409
+	DEF:  <module>
+		<module>-MALDI Converter Started
+2020-09-20 19:19:51.985409
+	DEF:  listinfiles
+		listinfiles-return: []
+2020-09-20 19:19:51.986409
+	DEF:  listoutfiles
+		listoutfiles-return: []
+2020-09-20 19:19:51.988409
+	DEF:  findMatchInOutFile
+		findMatchInOutFile-return: {}
+2020-09-20 19:19:51.989409
+	DEF:  runacheck
+2020-09-20 19:19:51.990409
+	DEF:  listinfiles
+		listinfiles-return: []
+2020-09-20 19:19:51.991409
+	DEF:  listoutfiles
+		listoutfiles-return: []
+2020-09-20 19:19:51.993409
+	DEF:  findMatchInOutFile
+		findMatchInOutFile-return: {}
+		runacheck-No Match Found: 
+2020-09-20 19:20:17.483867
+	DEF:  <module>
+		<module>-MALDI Converter Started
+2020-09-20 19:20:17.484867
+	DEF:  listinfiles
+		listinfiles-return: []
+2020-09-20 19:20:17.486867
+	DEF:  listoutfiles
+		listoutfiles-return: []
+2020-09-20 19:20:17.488867
+	DEF:  findMatchInOutFile
+		findMatchInOutFile-return: {}
+2020-09-20 19:20:17.489867
+	DEF:  runacheck
+2020-09-20 19:20:17.490868
+	DEF:  listinfiles
+		listinfiles-return: []
+2020-09-20 19:20:17.491868
+	DEF:  listoutfiles
+		listoutfiles-return: []
+2020-09-20 19:20:17.493868
+	DEF:  findMatchInOutFile
+		findMatchInOutFile-return: {}
+		runacheck-No Match Found: 
+2020-09-20 19:20:52.594875
+	DEF:  <module>
+		<module>-MALDI Converter Started
+2020-09-20 19:20:52.596875
+	DEF:  listinfiles
+		listinfiles-return: []
+2020-09-20 19:20:52.597876
+	DEF:  listoutfiles
+		listoutfiles-return: []
+2020-09-20 19:20:52.599876
+	DEF:  findMatchInOutFile
+		findMatchInOutFile-return: {}
+2020-09-20 19:20:52.600876
+	DEF:  runacheck
+2020-09-20 19:20:52.601876
+	DEF:  listinfiles
+		listinfiles-return: []
+2020-09-20 19:20:52.602876
+	DEF:  listoutfiles
+		listoutfiles-return: []
+2020-09-20 19:20:52.604876
+	DEF:  findMatchInOutFile
+		findMatchInOutFile-return: {}
+		runacheck-No Match Found: 
+2020-09-20 19:26:41.391825
+	DEF:  <module>
+		<module>-MALDI Converter Started
+2020-09-20 19:26:41.393826
+	DEF:  listinfiles
+		listinfiles-return: []
+2020-09-20 19:26:41.395826
+	DEF:  listoutfiles
+		listoutfiles-return: []
+2020-09-20 19:26:41.396826
+	DEF:  findMatchInOutFile
+		findMatchInOutFile-return: {}
+2020-09-20 19:26:41.398826
+	DEF:  runacheck
+2020-09-20 19:26:41.398826
+	DEF:  listinfiles
+		listinfiles-return: []
+2020-09-20 19:26:41.400826
+	DEF:  listoutfiles
+		listoutfiles-return: []
+2020-09-20 19:26:41.402826
+	DEF:  findMatchInOutFile
+		findMatchInOutFile-return: {}
+		runacheck-No Match Found: 
+2020-09-20 19:27:21.639127
+	DEF:  <module>
+		<module>-MALDI Converter Started
+2020-09-20 19:27:21.641128
+	DEF:  listinfiles
+		listinfiles-return: []
+2020-09-20 19:27:21.643128
+	DEF:  listoutfiles
+		listoutfiles-return: []
+2020-09-20 19:27:21.644128
+	DEF:  findMatchInOutFile
+		findMatchInOutFile-return: {}
+2020-09-20 19:27:21.646128
+	DEF:  runacheck
+2020-09-20 19:27:21.647128
+	DEF:  listinfiles
+		listinfiles-return: []
+2020-09-20 19:27:21.649128
+	DEF:  listoutfiles
+		listoutfiles-return: []
+2020-09-20 19:27:21.651128
+	DEF:  findMatchInOutFile
+		findMatchInOutFile-return: {}
+		runacheck-No Match Found: 
+2020-09-20 19:28:24.102700
+	DEF:  <module>
+		<module>-MALDI Converter Started
+2020-09-20 19:28:24.105700
+	DEF:  listinfiles
+		listinfiles-return: []
+2020-09-20 19:28:24.108700
+	DEF:  listoutfiles
+		listoutfiles-return: []
+2020-09-20 19:28:24.111701
+	DEF:  findMatchInOutFile
+		findMatchInOutFile-return: {}
+2020-09-20 19:28:24.112701
+	DEF:  runacheck
+2020-09-20 19:28:24.113701
+	DEF:  listinfiles
+		listinfiles-return: []
+2020-09-20 19:28:24.115701
+	DEF:  listoutfiles
+		listoutfiles-return: []
+2020-09-20 19:28:24.117701
+	DEF:  findMatchInOutFile
+		findMatchInOutFile-return: {}
+		runacheck-No Match Found: 
+2020-09-20 19:28:32.356172
+	DEF:  <module>
+		<module>-MALDI Converter Started
+2020-09-20 19:28:32.358172
+	DEF:  listinfiles
+		listinfiles-return: []
+2020-09-20 19:28:32.359172
+	DEF:  listoutfiles
+		listoutfiles-return: []
+2020-09-20 19:28:32.361172
+	DEF:  findMatchInOutFile
+		findMatchInOutFile-return: {}
+2020-09-20 19:28:32.363173
+	DEF:  runacheck
+2020-09-20 19:28:32.363173
+	DEF:  listinfiles
+		listinfiles-return: []
+2020-09-20 19:28:32.365173
+	DEF:  listoutfiles
+		listoutfiles-return: []
+2020-09-20 19:28:32.366173
+	DEF:  findMatchInOutFile
+		findMatchInOutFile-return: {}
+		runacheck-No Match Found: 

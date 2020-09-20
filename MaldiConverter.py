@@ -318,7 +318,7 @@ def runacheck():
     matched=findMatchInOutFile()
     if len(matched)==0:
         msg("No Match Found: ", tofile=_DebugToFile)
-    print ( matched)
+    #print ( matched)
     for afile in matched:
         #print(afile)
         sfileok = False
@@ -346,12 +346,12 @@ def runacheck():
         #print(ffile)
 
         infile=loadCSVfile(infilename)
-        print("infile: ",infile)
+        #print("infile: ",infile)
         #print("----------------------")
         resultlist=[]
         ffilemissing=False
         for line in infile:
-            print("line: ", line)
+            #print("line: ", line)
             id=line[1]
             fungi=line[5]
             #print(id)
@@ -359,7 +359,7 @@ def runacheck():
             #print(id)
             frow=None
             #print(ffile)
-            print(sfilename)
+            #print(sfilename)
             
             if ffileok:
                 frow=checkInLine(id,ffile,0)
@@ -392,7 +392,7 @@ def runacheck():
             msg("f file missing",tofile=_DebugToFile)
             continue
         resultfilename=createResultFileName(afile)
-        print(resultfilename)
+        #print(resultfilename)
         #print(resultlist)
         writeResultFile(resultfilename,resultlist)
         # file movement after RESULT generatiom
@@ -404,29 +404,20 @@ def runacheck():
         if ffileok:
             shutil.move(ffilename,_BackupOUT)
         
-        print(infilename,_BackupIN)
+        #print(infilename,_BackupIN)
         shutil.move(infilename,_BackupIN)    
         #result file backup
         resultfilefullname=_DirectoryResult+"/"+resultfilename
         shutil.move(resultfilefullname,_Backupresult) 
-         
+     
          
         
-
-
-
 '''
  MAIN
-
-
-
-
-
 '''
-
 
 msg(tofile=_DebugToFile)
 msg("MALDI Converter Started",tofile=_DebugToFile)
 findMatchInOutFile()
-print("*******************")
+#print("*******************")
 runacheck()
