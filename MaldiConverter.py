@@ -369,7 +369,7 @@ def runacheck():
             if ffileok==False:
                 #print(srow)
                 result=srow
-                if fungi="TYMC":
+                if fungi=="TYMC":
                     msg("f file missing",tofile=_DebugToFile)
                     continue
                 else:
