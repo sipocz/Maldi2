@@ -349,6 +349,7 @@ def runacheck():
         print("infile: ",infile)
         #print("----------------------")
         resultlist=[]
+        ffilemissing=False
         for line in infile:
             print("line: ", line)
             id=line[1]
@@ -369,9 +370,9 @@ def runacheck():
             if ffileok==False:
                 #print(srow)
                 result=srow
-                if fungi=="TYMC":
-                    msg("f file missing",tofile=_DebugToFile)
-                    continue
+                if fungi=="TYMC": # nincs f file pedig léteznie kellene !!!
+                    
+                    ffilemissing=True
                 else:
                     pass
                     
@@ -386,6 +387,10 @@ def runacheck():
             #print("result:", result)
             resultlist.append([id,result[3],result[6]])
             #print("eddig eljutottunk")
+        
+        if ffilemissing:
+            msg("f file missing",tofile=_DebugToFile)
+            continue
         resultfilename=createResultFileName(afile)
         print(resultfilename)
         #print(resultlist)
