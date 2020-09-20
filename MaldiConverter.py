@@ -53,7 +53,7 @@ def searchfiles(outFileName, extension='.ttf', folder='C:\\', deltaTime=3600 * 2
     currentDateTimeStamp = dt.datetime.now().timestamp()
     # print (currentDateTimeStamp)
     with open(outFileName, "w", encoding="utf-8") as filewrite:
-        for r, d, f in os.walk(folder):
+        for r, _, f in os.walk(folder):
             for file in f:
                 if file.endswith(extension):
                     # print(r+file)
@@ -369,6 +369,13 @@ def runacheck():
             if ffileok==False:
                 #print(srow)
                 result=srow
+                if fungi="TYMC":
+                    msg("f file missing",tofile=_DebugToFile)
+                    continue
+                else:
+                    pass
+                    
+
             else:     # ha van f file
                 #print(frow)
                 if fungi=="TYMC":
@@ -405,6 +412,11 @@ def runacheck():
 
 '''
  MAIN
+
+
+
+
+
 '''
 
 
