@@ -283,7 +283,7 @@ def checkInLine(key, list,column):
     :param key: a kulcsot
     :param list:  a lista
     :param column: ebben a listaelemben keres
-    :return: a lsita sora, ha megtaláltuk kúlönben None
+    :return: a lista sora, ha megtaláltuk kúlönben None
     '''
     for line in list:
         #print("line:",line)

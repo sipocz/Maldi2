@@ -1,0 +1,27 @@
+2020-10-10 17:17:47.928275
+	DEF:  createLogFile
+		createLogFile-created
+2020-10-10 17:17:47.930275
+	DEF:  <module>
+		<module>-MALDI Converter Started
+2020-10-10 17:17:47.931275
+	DEF:  listinfiles
+		listinfiles-return: []
+2020-10-10 17:17:47.932275
+	DEF:  listoutfiles
+		listoutfiles-return: []
+2020-10-10 17:17:47.934276
+	DEF:  findMatchInOutFile
+		findMatchInOutFile-return: {}
+2020-10-10 17:17:47.935276
+	DEF:  runacheck
+2020-10-10 17:17:47.936276
+	DEF:  listinfiles
+		listinfiles-return: []
+2020-10-10 17:17:47.937276
+	DEF:  listoutfiles
+		listoutfiles-return: []
+2020-10-10 17:17:47.939276
+	DEF:  findMatchInOutFile
+		findMatchInOutFile-return: {}
+		runacheck-No Match Found: 
