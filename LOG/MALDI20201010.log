@@ -25,3 +25,27 @@
 	DEF:  findMatchInOutFile
 		findMatchInOutFile-return: {}
 		runacheck-No Match Found: 
+2020-10-10 17:43:14.879612
+	DEF:  <module>
+		<module>-MALDI Converter Started
+2020-10-10 17:43:15.557651
+	DEF:  listinfiles
+		listinfiles-return: []
+2020-10-10 17:43:15.559651
+	DEF:  listoutfiles
+		listoutfiles-return: []
+2020-10-10 17:43:15.587652
+	DEF:  findMatchInOutFile
+		findMatchInOutFile-return: {}
+2020-10-10 17:43:15.589652
+	DEF:  runacheck
+2020-10-10 17:43:15.589652
+	DEF:  listinfiles
+		listinfiles-return: []
+2020-10-10 17:43:15.591653
+	DEF:  listoutfiles
+		listoutfiles-return: []
+2020-10-10 17:43:15.592653
+	DEF:  findMatchInOutFile
+		findMatchInOutFile-return: {}
+		runacheck-No Match Found: 

@@ -276,6 +276,29 @@ def findMatchInOutFile():
     msg("return: "+str(out), tofile=_DebugToFile)
     return(out)
 
+def findMatchedInOutFile():
+    '''
+    név alapján összekapcsolja az IN és OUT könyvtárban lévő fájlokat
+    1-1 megfeleltetés a végleges megoldáshoz 
+    :return: listában adja vissza az egymáshoz tartozó fájlokat
+    '''
+    out={}
+    inlist=listinfiles()
+    outlist=listoutfiles()
+    #print(inlist)
+    #print(outlist)
+    msg(tofile=_DebugToFile)
+    for infile in inlist:
+        for outfile in outlist:
+            if (splitInfile(infile)[0] in splitOutfile(outfile)[0]) and (splitInfile(infile)[1] in splitOutfile(outfile)[1]):
+                msg("match:  "+infile+" _AND_ "+outfile,tofile=_DebugToFile)
+                # tároljuk be az infókat
+                if infile not in out:
+                    out[infile]=[outfile]
+                else:
+                    out[infile].append(outfile)
+    msg("return: "+str(out), tofile=_DebugToFile)
+    return(out)
 
 def checkInLine(key, list,column):
     '''
@@ -409,12 +432,61 @@ def runacheck():
         #result file backup
         resultfilefullname=_DirectoryResult+"/"+resultfilename
         shutil.move(resultfilefullname,_Backupresult) 
-     
+
+
+def runthecheck():
+    '''
+    Elvégezzük az ellenőrzést
+    1-1 megfeleltetés van az input és az outpiut file között 
+    '''
+    msg(tofile=_DebugToFile)
+    matched=findMatchedInOutFile()
+    if len(matched)==0:
+        msg("No Match Found: ", tofile=_DebugToFile)
+        return  # nincs mit csinálni
+    print ( matched)
+    for afile in matched:
+        #print(afile)
+      
+        outfile = matched[afile]
+            #print(outfiles)
+            #print("--------------------------")
+            #print(re.match(r'[0-9_-]*f[0-9_ -]*.csv', outfiles))
+            
+        infilename=_DirectoryIn+"/"+afile
+        infile=loadCSVfile(infilename)
+        outfile=loadCSVfile(_DirectoryOut+"/"+outfile)
+        
+        #print("----------------------")
+        resultlist=[]
+        for line in infile:
+            #print("line: ", line)
+            id=line[1]
+            fungi=line[5]
+            result=checkInLine(id,outfile,0)
+            #print("result:", result)
+            resultlist.append([id,result[3],result[6]])
+            #print("eddig eljutottunk")
+        resultfilename=createResultFileName(afile)
+        #print(resultfilename)
+        #print(resultlist)
+        writeResultFile(resultfilename,resultlist)
+        # file movement after RESULT generation
+       
+       
+        
+        #print(infilename,_BackupIN)
+        shutil.move(infilename,_BackupIN)    
+        #result file backup
+        resultfilefullname=_DirectoryResult+"/"+resultfilename
+        shutil.move(resultfilefullname,_Backupresult) 
+
          
         
 '''
  MAIN
 '''
+
 
 msg(tofile=_DebugToFile)
 msg("MALDI Converter Started",tofile=_DebugToFile)
