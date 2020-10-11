@@ -64,7 +64,7 @@ def searchfiles(outFileName, extension='.ttf', folder='C:\\', deltaTime=3600 * 2
                         filewrite.write(f"{fname}\n")
 
 
-def timestamp():
+def timestamp(): 
     '''
     Az aktuális időpontot adja vissza string formában YYYY-MM-DD HH-MM-SS.xxxxxx
     '''
