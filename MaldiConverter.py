@@ -19,7 +19,7 @@ DIRECTORY definitions
 
 _Basedirectory="C:/Space/maldi2"
 _Tmpdirectory="C:/Space/maldiTMP"
-_Backupdirectory="C:/Space/MaldiBCKP"
+_Backupdirectory="C:/Space/Maldi2/MaldiBCKP"
 _Indirectory="/IN"
 _Resultdirectory="/RESULT"
 _Outdirectory="/OUT2"
@@ -185,6 +185,7 @@ def splitOutfile(fname):
     fname_list=fname.split(".")
     fname_1=fname_list[0]
     parts=fname_1.split("-",3)
+    print(parts)
     return([parts[2],parts[3],fname])
 
 
@@ -285,8 +286,8 @@ def findMatchedInOutFile():
     out={}
     inlist=listinfiles()
     outlist=listoutfiles()
-    #print(inlist)
-    #print(outlist)
+    print(inlist)
+    print(outlist)
     msg(tofile=_DebugToFile)
     for infile in inlist:
         for outfile in outlist:
@@ -446,10 +447,10 @@ def runthecheck():
         return  # nincs mit csinálni
     print ( matched)
     for afile in matched:
-        #print(afile)
-      
-        outfile = matched[afile]
-            #print(outfiles)
+        print(afile)
+        #print(matched[afile])
+        outfile = matched[afile][0]
+        #print(outfile)
             #print("--------------------------")
             #print(re.match(r'[0-9_-]*f[0-9_ -]*.csv', outfiles))
             
@@ -457,12 +458,12 @@ def runthecheck():
         infile=loadCSVfile(infilename)
         outfile=loadCSVfile(_DirectoryOut+"/"+outfile)
         
-        #print("----------------------")
+        print("----------------------")
         resultlist=[]
         for line in infile:
             #print("line: ", line)
             id=line[1]
-            fungi=line[5]
+           
             result=checkInLine(id,outfile,0)
             #print("result:", result)
             resultlist.append([id,result[3],result[6]])
@@ -476,10 +477,10 @@ def runthecheck():
        
         
         #print(infilename,_BackupIN)
-        shutil.move(infilename,_BackupIN)    
+        #shutil.move(infilename,_BackupIN)    
         #result file backup
         resultfilefullname=_DirectoryResult+"/"+resultfilename
-        shutil.move(resultfilefullname,_Backupresult) 
+        #shutil.move(resultfilefullname,_Backupresult) 
 
          
         
@@ -490,6 +491,6 @@ def runthecheck():
 
 msg(tofile=_DebugToFile)
 msg("MALDI Converter Started",tofile=_DebugToFile)
-findMatchInOutFile()
+#findMatchInOutFile()
 #print("*******************")
-runacheck()
+runthecheck()

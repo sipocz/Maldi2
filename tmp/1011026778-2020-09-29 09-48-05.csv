@@ -33,7 +33,8 @@ C10;MP_91330_ID1011026779;DMHL - Dorogi Mikrobiológiai és Higiénés Labor_2020-09
 C11;MP_91331_ID1011026779;DMHL - Dorogi Mikrobiológiai és Higiénés Labor_2020-09-23;IV. Box önellenörzés_IV. box;EDT;TAMC
 C12;MP_91332_ID1011026779;DMHL - Dorogi Mikrobiológiai és Higiénés Labor_2020-09-23;"Bokros Lászlóné-Alkar külso oldala - jobb_""C"" hátterû tér";EDT;TAMC
 D1;MP_91333_ID1011026779;S-2 - SzintI. 2. tisztatér_2020-09-23;Tisztatér Helyiség közepe (at rest)_Tisztatér;EDT;TAMC
-D2;MP_91334_ID1011026779;S-2 - SzintI. 2. tisztatér_2020-09-23;"Padló Személyzsilip felöli ajtónál 0,5 m-re középen_Tisztatér";EDT;TAMC
+D2;MP_91334_ID1011026779;S-2 - SzintI. 2. tisztatér_2020-09-23;"Padló Személyzsilip felöli ajtónál 
+0,5 m-re középen_Tisztatér";EDT;TAMC
 D3;MP_91335_ID1011026779;S-2 - SzintI. 2. tisztatér_2020-09-23;Kilincs Anyagzsilip melletti ajtó_Tisztatér;EDT;TAMC
 D4;MP_91336_ID1011026779;S-2 - SzintI. 2. tisztatér_2020-09-23;Mérleg Mérõfelület közepe_Tisztatér;EDT;TAMC
 D5;MP_91337_ID1011026779;S-2 - SzintI. 2. tisztatér_2020-09-23;Anyagzsilip  levegõ Helyiség közepe_Anyagzsilip;EDT;TAMC
@@ -65,15 +66,19 @@ F6;MP_91362_ID1011026779;L-491 - Szint III. 491. tisztatér_2020-09-25;Padló Csat
 F7;MP_91363_ID1011026779;L-491 - Szint III. 491. tisztatér_2020-09-25;Anyagzsilip levegõ  Alsó vízszintes felület közepén_Anyagzsilip (EMELET);EDT;TAMC
 F8;MP_91364_ID1011026779;L-491 - Szint III. 491. tisztatér_2020-09-25;Fehér öltözõ levegõ Helyiség közepe_Fehér öltözõ (EMELET);EDT;TAMC
 F9;MP_91365_ID1011026779;L-491 - Szint III. 491. tisztatér_2020-09-25;Kilincs Munkatér felöli ajtó_Fehér öltözõ (EMELET);EDT;TAMC
-F10;MP_91366_ID1011026779;L-491 - Szint III. 491. tisztatér_2020-09-25;"Padló Átülõpad mögötti rész középen a tisztatér felöl_Fehér öltözõ (EMELET)";EDT;TAMC
-F11;MP_91367_ID1011026779;L-491 - Szint III. 491. tisztatér_2020-09-25;"Átülõ pad lõ felület közepe_Fehér öltözõ (EMELET)";EDT;TAMC
+F10;MP_91366_ID1011026779;L-491 - Szint III. 491. tisztatér_2020-09-25;"Padló
+Átülõpad mögötti rész középen a tisztatér felöl_Fehér öltözõ (EMELET)";EDT;TAMC
+F11;MP_91367_ID1011026779;L-491 - Szint III. 491. tisztatér_2020-09-25;"Átülõ pad  
+Ülõ felület közepe_Fehér öltözõ (EMELET)";EDT;TAMC
 F12;MP_91368_ID1011026779;L-491 - Szint III. 491. tisztatér_2020-09-25;Asztal_Munkatér (FÖLDSZINT);EDT;TAMC
 G1;MP_91369_ID1011026779;L-491 - Szint III. 491. tisztatér_2020-09-25;Szabó Istvánné-Alkar külso oldala - jobb_Munkatér (EMELET);EDT;TAMC
 G2;MP_91370_ID1011026779;DMHL - Dorogi Mikrobiológiai és Higiénés Labor_2020-09-25;Spanyúrné Mészáros Tünde-Alkar külso oldala - jobb_Tisztatér 008;EDT;TAMC
 G3;MP_91371_ID1011026779;DMHL - Dorogi Mikrobiológiai és Higiénés Labor_2020-09-25;Spanyúrné Mészáros Tünde-Alkar külso oldala - jobb_Tisztatér 008;EDT;TAMC
 G4;MP_91372_ID1011026779;DMHL - Dorogi Mikrobiológiai és Higiénés Labor_2020-09-25;Kilincs Munkatér felöli ajtó_Fehér öltözõ (EMELET);EDT;TAMC
-G5;MP_91373_ID1011026779;DMHL - Dorogi Mikrobiológiai és Higiénés Labor_2020-09-25;"Padló Átülõpad mögötti rész középen a tisztatér felöl_Fehér öltözõ (EMELET)";EDT;TAMC
-G6;MP_91374_ID1011026779;DMHL - Dorogi Mikrobiológiai és Higiénés Labor_2020-09-25;"Átülõ pad  Ülõ felület közepe_Fehér öltözõ (EMELET)";EDT;TAMC
+G5;MP_91373_ID1011026779;DMHL - Dorogi Mikrobiológiai és Higiénés Labor_2020-09-25;"Padló
+Átülõpad mögötti rész középen a tisztatér felöl_Fehér öltözõ (EMELET)";EDT;TAMC
+G6;MP_91374_ID1011026779;DMHL - Dorogi Mikrobiológiai és Higiénés Labor_2020-09-25;"Átülõ pad  
+Ülõ felület közepe_Fehér öltözõ (EMELET)";EDT;TAMC
 G7;MP_91375_ID1011026779;DMHL - Dorogi Mikrobiológiai és Higiénés Labor_2020-09-25;Asztal_Munkatér (FÖLDSZINT);EDT;TAMC
 G8;MP_91376_ID1011026779;DMHL - Dorogi Mikrobiológiai és Higiénés Labor_2020-09-25;Szabó Istvánné-Alkar külso oldala - jobb_Munkatér (EMELET);EDT;TAMC
 G9;MP_91377_ID1011026779;DMHL - Dorogi Mikrobiológiai és Higiénés Labor_2020-09-25;Spanyúrné Mészáros Tünde-Alkar külso oldala - jobb_Tisztatér 008;EDT;TAMC
