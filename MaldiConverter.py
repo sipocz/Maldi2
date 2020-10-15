@@ -60,7 +60,7 @@ def searchfiles(outFileName, extension='.ttf', folder='C:\\', deltaTime=3600 * 2
                     fname = r + "\\" + file
                     fileTimeStamp = os.path.getctime(fname)
                     # print(fileTimeStamp)
-                    if (currentDateTimeStamp - fileTimeStamp) <= deltaTime:
+                    if (currentDateTimeStamp - fileTimeStamp) <= deltaTime: 
                         filewrite.write(f"{fname}\n")
 
 
