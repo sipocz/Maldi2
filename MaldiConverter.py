@@ -17,9 +17,9 @@ _ResultEnd = "_RESULT_X"
 DIRECTORY definitions
 '''
 
-_Basedirectory="C:/Space/maldi2"
-_Tmpdirectory="C:/Space/maldiTMP"
-_Backupdirectory="C:/Space/Maldi2/MaldiBCKP"
+_Basedirectory="C:/gits/maldi2"
+_Tmpdirectory="C:/gits/maldiTMP"
+_Backupdirectory="C:/gits/Maldi2/MaldiBCKP"
 _Indirectory="/IN"
 _Resultdirectory="/RESULT"
 _Outdirectory="/OUT2"
@@ -493,4 +493,4 @@ msg(tofile=_DebugToFile)
 msg("MALDI Converter Started",tofile=_DebugToFile)
 #findMatchInOutFile()
 #print("*******************")
-runthecheck()
+runthecheck()  
