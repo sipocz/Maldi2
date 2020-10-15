@@ -438,7 +438,7 @@ def runacheck():
 def runthecheck():
     '''
     Elvégezzük az ellenőrzést
-    1-1 megfeleltetés van az input és az outpiut file között 
+    1-1 megfeleltetés van az input és az output file között 
     '''
     msg(tofile=_DebugToFile)
     matched=findMatchedInOutFile()
@@ -447,7 +447,8 @@ def runthecheck():
         return  # nincs mit csinálni
     print ( matched)
     for afile in matched:
-        print(afile)
+        print("afile:",afile)
+        msg("file:"+afile,tofile=_DebugToFile)
         #print(matched[afile])
         outfile = matched[afile][0]
         #print(outfile)
