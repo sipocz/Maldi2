@@ -1,0 +1,86 @@
+2020-10-17 20:58:32.339473
+	DEF:  createLogFile
+		createLogFile-created
+2020-10-17 20:58:32.339473
+	DEF:  <module>
+		<module>-MALDI Converter Started
+2020-10-17 20:58:32.340469
+	DEF:  runthecheck
+2020-10-17 20:58:32.340469
+	DEF:  listinfiles
+		listinfiles-return: ['1011025858-2020-09-29 09-48-01.csv', '1011026779-2020-09-29 09-48-05.csv', '1011026780-2020-09-22 15-42-59.csv']
+2020-10-17 20:58:32.340469
+	DEF:  listoutfiles
+		listoutfiles-return: ['20200922-1613-1011026780-2020-09-22 15-42-59.csv', '20200929-1224-1011025858-2020-09-29 09-48-01.csv', '20200929-1230-1011026779-2020-09-29 09-48-05.csv']
+2020-10-17 20:58:32.342465
+	DEF:  findMatchedInOutFile
+2020-10-17 20:58:32.342465
+	DEF:  splitInfile
+		splitInfile-return a split: ['1011025858', '2020-09-29 09-48-01', '1011025858-2020-09-29 09-48-01.csv']
+2020-10-17 20:58:32.343461
+	DEF:  splitInfile
+		splitInfile-return a split: ['1011025858', '2020-09-29 09-48-01', '1011025858-2020-09-29 09-48-01.csv']
+2020-10-17 20:58:32.343461
+	DEF:  splitInfile
+		splitInfile-return a split: ['1011025858', '2020-09-29 09-48-01', '1011025858-2020-09-29 09-48-01.csv']
+		findMatchedInOutFile-match:  1011025858-2020-09-29 09-48-01.csv _AND_ 20200929-1224-1011025858-2020-09-29 09-48-01.csv
+2020-10-17 20:58:32.344459
+	DEF:  splitInfile
+		splitInfile-return a split: ['1011025858', '2020-09-29 09-48-01', '1011025858-2020-09-29 09-48-01.csv']
+2020-10-17 20:58:32.344459
+	DEF:  splitInfile
+		splitInfile-return a split: ['1011026779', '2020-09-29 09-48-05', '1011026779-2020-09-29 09-48-05.csv']
+2020-10-17 20:58:32.345455
+	DEF:  splitInfile
+		splitInfile-return a split: ['1011026779', '2020-09-29 09-48-05', '1011026779-2020-09-29 09-48-05.csv']
+2020-10-17 20:58:32.345455
+	DEF:  splitInfile
+		splitInfile-return a split: ['1011026779', '2020-09-29 09-48-05', '1011026779-2020-09-29 09-48-05.csv']
+2020-10-17 20:58:32.346452
+	DEF:  splitInfile
+		splitInfile-return a split: ['1011026779', '2020-09-29 09-48-05', '1011026779-2020-09-29 09-48-05.csv']
+		findMatchedInOutFile-match:  1011026779-2020-09-29 09-48-05.csv _AND_ 20200929-1230-1011026779-2020-09-29 09-48-05.csv
+2020-10-17 20:58:32.346452
+	DEF:  splitInfile
+		splitInfile-return a split: ['1011026780', '2020-09-22 15-42-59', '1011026780-2020-09-22 15-42-59.csv']
+2020-10-17 20:58:32.346452
+	DEF:  splitInfile
+		splitInfile-return a split: ['1011026780', '2020-09-22 15-42-59', '1011026780-2020-09-22 15-42-59.csv']
+		findMatchedInOutFile-match:  1011026780-2020-09-22 15-42-59.csv _AND_ 20200922-1613-1011026780-2020-09-22 15-42-59.csv
+2020-10-17 20:58:32.347450
+	DEF:  splitInfile
+		splitInfile-return a split: ['1011026780', '2020-09-22 15-42-59', '1011026780-2020-09-22 15-42-59.csv']
+2020-10-17 20:58:32.347450
+	DEF:  splitInfile
+		splitInfile-return a split: ['1011026780', '2020-09-22 15-42-59', '1011026780-2020-09-22 15-42-59.csv']
+		findMatchedInOutFile-return: {'1011025858-2020-09-29 09-48-01.csv': ['20200929-1224-1011025858-2020-09-29 09-48-01.csv'], '1011026779-2020-09-29 09-48-05.csv': ['20200929-1230-1011026779-2020-09-29 09-48-05.csv'], '1011026780-2020-09-22 15-42-59.csv': ['20200922-1613-1011026780-2020-09-22 15-42-59.csv']}
+		runthecheck-file:1011025858-2020-09-29 09-48-01.csv
+2020-10-17 20:58:32.348447
+	DEF:  loadCSVfile
+		loadCSVfile-filename:C:/gits/maldi2/IN/1011025858-2020-09-29 09-48-01.csv
+2020-10-17 20:58:32.353433
+	DEF:  loadCSVfile
+		loadCSVfile-filename:C:/gits/maldi2/OUT2/20200929-1224-1011025858-2020-09-29 09-48-01.csv
+2020-10-17 20:58:32.360429
+	DEF:  createResultFileName
+		createResultFileName-RESULT file name created:1011025858-2020-09-29 09-48-01_RESULT_X.csv
+		runthecheck-file:1011026779-2020-09-29 09-48-05.csv
+2020-10-17 20:58:32.362416
+	DEF:  loadCSVfile
+		loadCSVfile-filename:C:/gits/maldi2/IN/1011026779-2020-09-29 09-48-05.csv
+2020-10-17 20:58:32.370390
+	DEF:  loadCSVfile
+		loadCSVfile-filename:C:/gits/maldi2/OUT2/20200929-1230-1011026779-2020-09-29 09-48-05.csv
+2020-10-17 20:58:32.376371
+	DEF:  createResultFileName
+		createResultFileName-RESULT file name created:1011026779-2020-09-29 09-48-05_RESULT_X.csv
+		runthecheck-file:1011026780-2020-09-22 15-42-59.csv
+2020-10-17 20:58:32.377369
+	DEF:  loadCSVfile
+		loadCSVfile-filename:C:/gits/maldi2/IN/1011026780-2020-09-22 15-42-59.csv
+2020-10-17 20:58:32.382356
+	DEF:  loadCSVfile
+		loadCSVfile-filename:C:/gits/maldi2/OUT2/20200922-1613-1011026780-2020-09-22 15-42-59.csv
+2020-10-17 20:58:32.388341
+	DEF:  createResultFileName
+		createResultFileName-RESULT file name created:1011026780-2020-09-22 15-42-59_RESULT_X.csv
