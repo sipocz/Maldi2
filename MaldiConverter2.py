@@ -503,10 +503,11 @@ def runthecheck():
         # +-------------------------------------------------------
         # |             itt szedjük össze az adatokat
         # |                       2021.02.02
-        # |  plates.dat id-t keresünk az Infileban
+        # |  plates.dat id-t keresünk az Infile nevébenban
         # |  ha megtaláltuk akkor infile-t, outfile-t átmásoljuk
         # |  result fájlt legeneráljuk  a backup könyvtárba
-        # |  az alkönyvtár a plates.dat-ban található site alkönyvtárába kerül
+        # |  az alkönyvtár a plates.dat-ban található site által meghatározott 
+        # |  alkönyvtárába kerül
         # |  Még össze is kell rakni az összesített .csv listáját ez nem egyenlő a mimolab 
         # |  RESULT fájl-lal.
         # +------------------------------------------------------- 
