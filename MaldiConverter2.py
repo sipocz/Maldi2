@@ -26,28 +26,28 @@ DIRECTORY definitions
 state="DEV"
 
 
-_Basedirectory="C:/Maldi/Maldi2-master"
-_Tmpdirectory="C:/Maldi/Maldi2-master/tmp"
-_Backupdirectory="\\\\hungary\dfsroot\\Maldi_Backups"+state            # 2021.02.03
+_Basedirectory="C:\\Maldi\\Maldi2-master"
+
+_Backupdirectory="\\\\hungary\dfsroot\\Maldi_Backups\\"+state            # 2021.02.03
 # -----------------------------------------------------------------------------------
 _Indirectory="\\\\hungary\\dfsroot\\Maldi_eredmenyek\\"+state+"\\MIMOLAB"
 _Resultdirectory="\\\\hungary\\dfsroot\\Maldi_eredmenyek\\"+state+"\\MIMOLAB" #"/RESULT"
 
 #------------------------------------------------------------------------------------
-_Outdirectory="/MaldiOut"
-_Logdirectory="/log"
+_Outdirectory="\\MaldiOut"
+_Logdirectory="\\log"
 
-_Backupresult=_Backupdirectory+_Resultdirectory
+_UsedPlateFile="plates.dat"
 
 
 _DirectoryIn=_Indirectory
 _DirectoryResult=_Resultdirectory
-_DirectoryOut="c:"+_Outdirectory
+_DirectoryOut="C:"+_Outdirectory
 _DebugToFile=True
 _logprefix = _Basedirectory+_Logdirectory
 
 
-_usedplatelist=_Basedirectory+_UsedPlateFile    # egy fájlra mutat ami csv-ként tartalmazza a plateID és fióktelep összerendeléseket
+_usedplatelist=_Basedirectory+"\\"+_UsedPlateFile    # egy fájlra mutat ami csv-ként tartalmazza a plateID és fióktelep összerendeléseket
 
 
 
@@ -376,7 +376,7 @@ def loadplates():
 
 def moveafile(sourceFile,destpath):
     msg(tofile=_DebugToFile)
-    shutil.move(resultfilefullname,_Backupresult) 
+    shutil.move(sourceFile,destpath) 
     msg("file:"+sourceFile+" dest:"+destpath,tofile=_DebugToFile)
     return(0)
 
@@ -474,6 +474,7 @@ def runthecheck():
                 # ha eddig eljutottunk, akkor a Sumlist -ben vannak az adatok 
                 # ki kell írni CSV-be a 
                 writeManualResultFile(destpath,"Sum"+afile,Sumlist)
+                # hozzá kell írni a alldata file-hoz!!!
                 alldatafile=_Backupdirectory+"\\"+selectedsite+_site_kezi_dir_End+"\\"+currentyear+"\\"+_site_allfile_prefix+selectedsite+_site_allfile_postfix+".csv"
                 additionalfile=destpath+"\\"+"Sum"+afile
           
