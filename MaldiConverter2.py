@@ -25,6 +25,7 @@ _Backupdirectory="C:/MaldiBackup"
 # -----------------------------------------------------------------------------------
 _Indirectory="\\\\hungary\\dfsroot\\Maldi_eredmenyek\\dev\\MIMOLAB"
 _Resultdirectory="\\\\hungary\\dfsroot\\Maldi_eredmenyek\\dev\\MIMOLAB" #"/RESULT"
+
 #------------------------------------------------------------------------------------
 _Outdirectory="/MaldiOut"
 _Logdirectory="/log"
@@ -317,7 +318,7 @@ def findMatchedInOutFile():
 def checkInLine(key, list,column):
     '''
     kulcsot keres egy listában
-    :param key: a kulcsot
+    :param key: a kulcs
     :param list:  a lista
     :param column: ebben a listaelemben keres
     :return: a lista sora, ha megtaláltuk kúlönben None
@@ -346,111 +347,32 @@ def writeResultFile(fname,reslist):
         print("",file=f)
     f.close()
 
-
-def runacheck():
+def writeManualResultFile(Directory,fname,reslist):
     '''
-    Elvégezzük az ellenőrzést 
+    Létrehozza az eredményfájlt
+    :param fname: a készítendő file neve, a könyvtárnévvel automatikusan kiegészítésre kerül
+    :param reslist: lista a file elemeiről
+    :return:  None
     '''
     msg(tofile=_DebugToFile)
-    matched=findMatchInOutFile()
-    if len(matched)==0:
-        msg("No Match Found: ", tofile=_DebugToFile)
-    #print ( matched)
-    for afile in matched:
-        #print(afile)
-        sfileok = False
-        ffileok = False
-        for outfiles in matched[afile]:
-            #print(outfiles)
-            #print("--------------------------")
-            #print(re.match(r'[0-9_-]*f[0-9_ -]*.csv', outfiles))
-            if re.match(r'[0-9_-]*s[0-9_ -]*.csv', outfiles):
-                sfilename = _DirectoryOut + "/" + outfiles
-                sfileok=True
-                #print(sfilename)
-            if re.match(r'[0-9_-]*f[0-9_ -]*.csv', outfiles):
-                ffilename = _DirectoryOut + "/" + outfiles
-                ffileok=True
-
-        infile=loadCSVfile(_DirectoryIn+"/"+afile)
-        if sfileok:
-            sfile=loadCSVfile(sfilename)
-        if  ffileok:
-            ffile=loadCSVfile(ffilename)
-        infilename=_DirectoryIn+"/"+afile
-        #print(infile)
-        #print(sfile)
-        #print(ffile)
-
-        infile=loadCSVfile(infilename)
-        #print("infile: ",infile)
-        #print("----------------------")
-        resultlist=[]
-        ffilemissing=False
-        for line in infile:
-            #print("line: ", line)
-            id=line[1]
-            fungi=line[5]
-            #print(id)
-            #check in f file
-            #print(id)
-            frow=None
-            #print(ffile)
-            #print(sfilename)
-            
-            if ffileok:
-                frow=checkInLine(id,ffile,0)
-            
-            srow=checkInLine(id,sfile,0)
-            #print("srow:",srow)
-            #print("ffileok: ", ffileok)
-            if ffileok==False:
-                #print(srow)
-                result=srow
-                if fungi=="TYMC": # nincs f file pedig léteznie kellene !!!
-                    
-                    ffilemissing=True
-                else:
-                    pass
-                    
-
-            else:     # ha van f file
-                #print(frow)
-                if fungi=="TYMC":
-                    result=frow
-                else:
-                    result=srow
-            
-            #print("result:", result)
-            resultlist.append([id,result[3],result[6]])
-            #print("eddig eljutottunk")
-        
-        if ffilemissing:
-            msg("f file missing",tofile=_DebugToFile)
-            continue
-        resultfilename=createResultFileName(afile)
-        #print(resultfilename)
-        #print(resultlist)
-        writeResultFile(resultfilename,resultlist)
-        # file movement after RESULT generatiom
-        #  
-        #shutil.move()
-        #print(infilename, sfilename,ffilename)  
-        if sfileok:
-            shutil.move(sfilename,_BackupOUT)
-        if ffileok:
-            shutil.move(ffilename,_BackupOUT)
-        
-        #print(infilename,_BackupIN)
-        shutil.move(infilename,_BackupIN)    
-        #result file backup
-        resultfilefullname=_DirectoryResult+"/"+resultfilename
-        shutil.move(resultfilefullname,_Backupresult) 
+    fname=Directory+"/"+fname
+    f=open(fname,"w")
+    for line in reslist:
+        for field in line:
+            print(field+";",end="",file=f)
+        print("",file=f)
+    f.close()
 
 def loadplates():
     f=loadCSVfile(_usedplatelist)
     f2=dict(f)
     return(f2) 
+
+def moveafile(sourceFile,destpath):
+    msg(tofile=_DebugToFile)
+    shutil.move(resultfilefullname,_Backupresult) 
+    msg("file:"+sourceFile+" dest:"+destpath,tofile=_DebugToFile)
+    return(0)
 
 
 def runthecheck():
@@ -511,7 +433,37 @@ def runthecheck():
         # |  Még össze is kell rakni az összesített .csv listáját ez nem egyenlő a mimolab 
         # |  RESULT fájl-lal.
         # +------------------------------------------------------- 
-        
+        for plate in plates:
+            if plate in infilename:                                         # megtaláltuk a plate azonosítót
+                selectedsite=plates[plate]                                  # ez a site neve
+                destpath=_Backupdirectory+"\\"+selectedsite                 # ez a backup könyvtár neve site névvel kiegészítve
+                moveafile(infilename,destpath)                              # infile másolása
+                moveafile(outfilename,destpath)                             # outfile másolása
+                writeManualResultFile(destpath,resultfilename,resultlist)   # resultfile létrehozása ide is
+                # készen is lennénk de még össze kell állítani az összesített listát
+                # az adatok az infile és outfile listában vannak
+                Sumlist=[]
+                for line in infile:
+                    #print("line: ", line)
+                    position=line[0]
+                    plateID=line[1]
+                    nameanddate=line[2]
+                    Name_hely=nameanddate.split("#")[0]
+                    Name_datum=nameanddate.split("#")[1]
+                    
+                    sampleType=line[3]
+                    PrepProt=line[4]
+                    Description=line[5]
+
+           
+                    result=checkInLine(plateID,outfile,0)
+                    detected=result[3]
+                    logscore=result[6]
+                    #print("result:", result)
+                    Sumlist.append([Name_hely,Name_datum,plateID,Description,sampleType,PrepProt,detected,logscore])
+                    #print("eddig eljutottunk")
+                    resultfilename=createResultFileName(afile)
+
           
 
 
