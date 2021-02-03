@@ -462,7 +462,9 @@ def runthecheck():
                     #print("result:", result)
                     Sumlist.append([Name_hely,Name_datum,plateID,Description,sampleType,PrepProt,detected,logscore])
                     #print("eddig eljutottunk")
-                    resultfilename=createResultFileName(afile)
+                # ha eddig eljutottunk, akkor a Sumlist -ben vannak az adatok 
+                # ki kell írni CSV-be a 
+                writeManualResultFile(destpath,"Sum"+afile,Sumlist)
 
           
 
