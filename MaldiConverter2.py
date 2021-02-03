@@ -7,30 +7,36 @@ import re
 #   Sipőcz László   2021. 02. 02.
 #
 
+currentyear="Y_"+str(dt.datetime.now().year)
+
+
 '''
 GLOBAL CONSTANT definitions
 '''
 _logext = ".log"
 _swname = "MALDI"
 _ResultEnd = "_RESULT"
-
+_site_kezi_dir_End="_kezi"
+_site_allfile_prefix="!"
+_site_allfile_postfix="_all"
 
 '''
 DIRECTORY definitions
 '''
+state="DEV"
+
 
 _Basedirectory="C:/Maldi/Maldi2-master"
 _Tmpdirectory="C:/Maldi/Maldi2-master/tmp"
-_Backupdirectory="C:/MaldiBackup"
+_Backupdirectory="\\\\hungary\dfsroot\\Maldi_Backups"+state            # 2021.02.03
 # -----------------------------------------------------------------------------------
-_Indirectory="\\\\hungary\\dfsroot\\Maldi_eredmenyek\\dev\\MIMOLAB"
-_Resultdirectory="\\\\hungary\\dfsroot\\Maldi_eredmenyek\\dev\\MIMOLAB" #"/RESULT"
+_Indirectory="\\\\hungary\\dfsroot\\Maldi_eredmenyek\\"+state+"\\MIMOLAB"
+_Resultdirectory="\\\\hungary\\dfsroot\\Maldi_eredmenyek\\"+state+"\\MIMOLAB" #"/RESULT"
 
 #------------------------------------------------------------------------------------
 _Outdirectory="/MaldiOut"
 _Logdirectory="/log"
-_BackupIN=_Backupdirectory+_Indirectory
-_BackupOUT=_Backupdirectory+_Outdirectory
+
 _Backupresult=_Backupdirectory+_Resultdirectory
 
 
@@ -436,9 +442,12 @@ def runthecheck():
         for plate in plates:
             if plate in infilename:                                         # megtaláltuk a plate azonosítót
                 selectedsite=plates[plate]                                  # ez a site neve
-                destpath=_Backupdirectory+"\\"+selectedsite                 # ez a backup könyvtár neve site névvel kiegészítve
+                # pl.: \\hungary\dfsroot\maldi_backups\prd\Debrecen_kezi\Y_2021
+                destpath=_Backupdirectory+"\\"+selectedsite+_site_kezi_dir_End+"\\"+currentyear                 # ez a backup könyvtár neve site névvel kiegészítve
                 moveafile(infilename,destpath)                              # infile másolása
                 moveafile(outfilename,destpath)                             # outfile másolása
+                pdfname=outfilename[:-3]+"pdf"
+                moveafile(pdfname,destpath)                                 # pdf másolása    
                 writeManualResultFile(destpath,resultfilename,resultlist)   # resultfile létrehozása ide is
                 # készen is lennénk de még össze kell állítani az összesített listát
                 # az adatok az infile és outfile listában vannak
@@ -465,7 +474,8 @@ def runthecheck():
                 # ha eddig eljutottunk, akkor a Sumlist -ben vannak az adatok 
                 # ki kell írni CSV-be a 
                 writeManualResultFile(destpath,"Sum"+afile,Sumlist)
-
+                alldatafile=_Backupdirectory+"\\"+selectedsite+_site_kezi_dir_End+"\\"+currentyear+"\\"+_site_allfile_prefix+selectedsite+_site_allfile_postfix+".csv"
+                additionalfile=destpath+"\\"+"Sum"+afile
           
 
 
