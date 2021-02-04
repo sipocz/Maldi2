@@ -362,10 +362,14 @@ def writeManualResultFile(Directory,fname,reslist):
     '''
     msg(tofile=_DebugToFile)
     fname=Directory+"/"+fname
-    f=open(fname,"w", encoding="Latin")
+    f=open(fname,"w", encoding="Latin")  # latin van itt, 
     for line in reslist:
         for field in line:
-            print(field+";",end="",file=f)
+            if filed!=line[-1]:
+                print(field+";",end="",file=f)
+            else:
+                print(field,end="",file=f)
+        
         print("",file=f)
     f.close()
 
@@ -390,6 +394,10 @@ def moveafile(sourceFile,destpath):
 
 def file_append(basefile,appender,toppos=True):
     tmp_ext="_tmp"
+    if os.path.isfile(basefile):
+        pass
+    else:
+        writeManualResultFile(os.path.dirname(basefile),os.path.basename(basefile),[])   
     base1=loadCSVfile(basefile)
     app1=loadCSVfile(appender)
     if toppos:
