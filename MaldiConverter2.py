@@ -14,7 +14,7 @@ currentyear="Y_"+str(dt.datetime.now().year)
 GLOBAL CONSTANT definitions
 '''
 _logext = ".log"
-_swname = "MALDI"
+_swname = "MALDI_Converter_"
 _ResultEnd = "_RESULT"
 _site_kezi_dir_End="_kezi"
 _site_allfile_prefix="!"
@@ -30,7 +30,7 @@ _Basedirectory="C:\\Maldi\\Maldi2-master"
 
 _Backupdirectory=_pathprefix+"hungary\dfsroot\\Maldi_Backups\\"+state            # 2021.02.03
 # -----------------------------------------------------------------------------------
-_Indirectory=_pathprefix+"hungary\\dfsroot\\Maldi_eredmenyek\\"+state+"\\MIMOLAB"
+_Indirectory=_pathprefix+"hungary\\dfsroot\\Maldi_eredmenyek\\"+state+"\\MALDI_INPUT"
 _Resultdirectory=_pathprefix+"hungary\\dfsroot\\Maldi_eredmenyek\\"+state+"\\MIMOLAB" #"/RESULT"
 
 #------------------------------------------------------------------------------------
@@ -165,7 +165,7 @@ def createLogFile():
     isostr=currentdate.isoformat()
     datestr="/"+_swname+str(isostr[0:4])+str(isostr[5:7])+str(isostr[8:10])
     fname=_logprefix+datestr+_logext
-    #print(fname)
+    #print(fnamep
     if ospath.exists(fname):
        pass
     else:
@@ -362,7 +362,7 @@ def writeManualResultFile(Directory,fname,reslist):
     '''
     msg(tofile=_DebugToFile)
     fname=Directory+"/"+fname
-    f=open(fname,"w")
+    f=open(fname,"w", encoding="Latin")
     for line in reslist:
         for field in line:
             print(field+";",end="",file=f)
@@ -370,14 +370,22 @@ def writeManualResultFile(Directory,fname,reslist):
     f.close()
 
 def loadplates():
-    f=loadCSVfile(_usedplatelist)
-    f2=dict(f)
-    return(f2) 
+    msg(tofile=_DebugToFile)
+    try:
+        f=loadCSVfile(_usedplatelist)
+        f2=dict(f)
+        return(f2) 
+    except:
+        msg("Hiba a file olvasásban: "+_usedplatelist,tofile=_DebugToFile)
+
 
 def moveafile(sourceFile,destpath):
     msg(tofile=_DebugToFile)
-    shutil.move(sourceFile,destpath) 
-    msg("file:"+sourceFile+" dest:"+destpath,tofile=_DebugToFile)
+    try:
+        shutil.move(sourceFile,destpath) 
+        msg("file:"+sourceFile+" dest:"+destpath,tofile=_DebugToFile)
+    except:
+        msg("hiba a file átmozgatásban:"+sourceFile+" dest:"+destpath,tofile=_DebugToFile)
     return(0)
 
 def file_append(basefile,appender,toppos=True):
@@ -404,6 +412,7 @@ def runthecheck():
     matched=findMatchedInOutFile()
     if len(matched)==0:
         msg("No Match Found: ", tofile=_DebugToFile)
+        print("kilépés")
         return  # nincs mit csinálni
     print ( matched)
     for afile in matched:
@@ -491,7 +500,11 @@ def runthecheck():
                 # hozzá kell írni a alldata file-hoz!!!
                 alldatafile=_Backupdirectory+"\\"+selectedsite+_site_kezi_dir_End+"\\"+currentyear+"\\"+_site_allfile_prefix+selectedsite+_site_allfile_postfix+".csv"
                 additionalfile=destpath+"\\"+"Sum"+afile
-          
+                print("alldata :", alldatafile)
+                print("additional :", additionalfile)
+                
+
+                file_append(alldatafile,additionalfile)
 
 
 
