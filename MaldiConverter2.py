@@ -365,7 +365,7 @@ def writeManualResultFile(Directory,fname,reslist):
     f=open(fname,"w", encoding="Latin")  # latin van itt, 
     for line in reslist:
         for field in line:
-            if filed!=line[-1]:
+            if field!=line[-1]:
                 print(field+";",end="",file=f)
             else:
                 print(field,end="",file=f)
