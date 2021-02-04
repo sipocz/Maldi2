@@ -22,7 +22,8 @@ currentyear="Y_"+str(dt.datetime.now().year)
 GLOBAL CONSTANT definitions
 '''
 
-state="DEV"  #  <-- fejlesztési állapot 
+state="DEV"             # <-- fejlesztési állapot  
+_pathprefix="C:\\"      # <--   hálózati környezetben "\\\\" !!   
 
 
 _logext = ".log"
@@ -31,7 +32,7 @@ _ResultEnd = "_RESULT"
 _site_kezi_dir_End="_kezi"
 _site_allfile_prefix="!"
 _site_allfile_postfix="_all"
-_pathprefix="C:\\"    # hálózati környezetben "\\\\" !!
+
 
 '''
 DIRECTORY definitions
