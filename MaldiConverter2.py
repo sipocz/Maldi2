@@ -29,6 +29,8 @@ state="DEV"
 _Basedirectory="C:\\Maldi\\Maldi2-master"
 
 _Backupdirectory=_pathprefix+"hungary\dfsroot\\Maldi_Backups\\"+state            # 2021.02.03
+_Backupdirectory_root=_pathprefix+"hungary\dfsroot\\Maldi_Backups\\"             # 2021.02.04
+
 # -----------------------------------------------------------------------------------
 _Indirectory=_pathprefix+"hungary\\dfsroot\\Maldi_eredmenyek\\"+state+"\\MALDI_INPUT"
 _Resultdirectory=_pathprefix+"hungary\\dfsroot\\Maldi_eredmenyek\\"+state+"\\MIMOLAB" #"/RESULT"
@@ -163,7 +165,7 @@ def createLogFile():
     from os import path as ospath
     currentdate=dt.datetime.now()
     isostr=currentdate.isoformat()
-    datestr="/"+_swname+str(isostr[0:4])+str(isostr[5:7])+str(isostr[8:10])
+    datestr="\\"+_swname+str(isostr[0:4])+str(isostr[5:7])+str(isostr[8:10])
     fname=_logprefix+datestr+_logext
     #print(fnamep
     if ospath.exists(fname):
@@ -345,7 +347,7 @@ def writeResultFile(fname,reslist):
     :param reslist: lista a file elemeiről
     :return:  None
     '''
-    fname=_DirectoryResult+"/"+fname
+    fname=_DirectoryResult+"\\"+fname
     f=open(fname,"w")
     for line in reslist:
         for field in line:
@@ -361,7 +363,7 @@ def writeManualResultFile(Directory,fname,reslist):
     :return:  None
     '''
     msg(tofile=_DebugToFile)
-    fname=Directory+"/"+fname
+    fname=Directory+"\\"+fname
     f=open(fname,"w", encoding="Latin")  # latin van itt, 
     for line in reslist:
         for field in line:
@@ -432,9 +434,9 @@ def runthecheck():
             #print("--------------------------")
             #print(re.match(r'[0-9_-]*f[0-9_ -]*.csv', outfiles))
             
-        infilename=_DirectoryIn+"/"+afile
+        infilename=_DirectoryIn+"\\"+afile
         infile=loadCSVfile(infilename)
-        outfilename=_DirectoryOut+"/"+outfile
+        outfilename=_DirectoryOut+"\\"+outfile
         outfile=loadCSVfile(outfilename)
         
         print("----------------------")
@@ -458,6 +460,27 @@ def runthecheck():
         # -------------------------------------------------------- 
         if "ID" in resultfilename:
             writeResultFile(resultfilename,resultlist)
+            # ----------------------------------------------------
+            #   még a ID-t tartalmazó fájlokat is backupolni kell külön
+            #   ide fognak kerülni 
+            #   pl.: \\hungary\dfsroot\maldi_backups\prd\MIMOLAB\Debrecen_kezi\Y_2021
+            #   
+            # ----------------------------------------------------
+            for plate in plates:
+                if plate in infilename:                                         # megtaláltuk a plate azonosítót
+                    selectedsite=plates[plate]                                  # ez a site neve
+                    # pl.: \\hungary\dfsroot\maldi_backups\prd\Debrecen_kezi\Y_2021
+                    destpath=_Backupdirectory_root+"\\"+state+"\\"+selectedsite+"\\"+currentyear                 # ez a backup könyvtár neve site névvel kiegészítve
+                    writeManualResultFile(destpath,resultfilename,resultlist)   # resultfile létrehozása ide is
+                    
+                    moveafile(infilename,destpath)                              # infile másolása
+                    moveafile(outfilename,destpath)                             # outfile másolása
+                    pdfname=outfilename[:-3]+"pdf"
+                    moveafile(pdfname,destpath)                                 # pdf másolása    
+                    
+                    # MIMOLAB fele menő adatokat nem rakunk ott össze mert ezek megjelennek a site adatai között 
+                     
+                    
         
         # +-------------------------------------------------------
         # |             itt szedjük össze az adatokat
@@ -522,7 +545,7 @@ def runthecheck():
         #print(infilename,_BackupIN)
         #shutil.move(infilename,_BackupIN)    
         #result file backup
-        resultfilefullname=_DirectoryResult+"/"+resultfilename
+        resultfilefullname=_DirectoryResult+"\\"+resultfilename
         #shutil.move(resultfilefullname,_Backupresult) 
 
          
