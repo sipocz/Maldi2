@@ -376,6 +376,11 @@ def writeManualResultFile(Directory,fname,reslist):
     f.close()
 
 def loadplates():
+    '''
+    A plate azonosítókat tartalmazó fájl beolvasása
+    dictionary lesz, amit a plateID indexel!
+    return: dictionary
+    '''
     msg(tofile=_DebugToFile)
     try:
         f=loadCSVfile(_usedplatelist)
@@ -386,6 +391,10 @@ def loadplates():
 
 
 def moveafile(sourceFile,destpath):
+    '''
+    A fájlog átmozgatását végzi, hibakezeléssel 
+    return: null
+    '''
     msg(tofile=_DebugToFile)
     try:
         shutil.move(sourceFile,destpath) 
@@ -395,6 +404,7 @@ def moveafile(sourceFile,destpath):
     return(0)
 
 def file_append(basefile,appender,toppos=True):
+    msg(tofile=_DebugToFile)
     tmp_ext="_tmp"
     if os.path.isfile(basefile):
         pass
@@ -553,9 +563,9 @@ def runthecheck():
 '''
  MAIN
 '''
-
-plates=loadplates()
 msg(tofile=_DebugToFile)
+plates=loadplates()
+
 msg("MALDI Converter Started",tofile=_DebugToFile)
 #findMatchInOutFile()
 #print("*******************")
