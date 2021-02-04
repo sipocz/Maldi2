@@ -1,18 +1,30 @@
+# +----------------------------------------
+# |  Maldiconverter   
+# | 
+# |  Sipőcz László   
+# |  1.0: 2020.10.01. Maldiconverte
+# |         Maldi eredmények visszaadása MIMOLAB fele
+# |  
+# |  2.0:  (Validált verzió) 
+# |         Backup könyvtárakba siteonként mentés  
+# |         Területenként összesített adatok készítése
+# |           
+# +----------------------------------------
 
 import os
 import shutil
 import datetime as dt
 import re
-# 
-#   Sipőcz László   2021. 02. 02.
-#
 
 currentyear="Y_"+str(dt.datetime.now().year)
-
 
 '''
 GLOBAL CONSTANT definitions
 '''
+
+state="DEV"  #  <-- fejlesztési állapot 
+
+
 _logext = ".log"
 _swname = "MALDI_Converter_"
 _ResultEnd = "_RESULT"
@@ -20,10 +32,10 @@ _site_kezi_dir_End="_kezi"
 _site_allfile_prefix="!"
 _site_allfile_postfix="_all"
 _pathprefix="C:\\"    # hálózati környezetben "\\\\" !!
+
 '''
 DIRECTORY definitions
 '''
-state="DEV"
 
 
 _Basedirectory="C:\\Maldi\\Maldi2-master"
@@ -577,9 +589,8 @@ def runthecheck():
  MAIN
 '''
 msg(tofile=_DebugToFile)
-plates=loadplates()
+
 
 msg("MALDI Converter Started",tofile=_DebugToFile)
-#findMatchInOutFile()
-#print("*******************")
+plates=loadplates()
 runthecheck()  
