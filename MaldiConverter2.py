@@ -426,7 +426,13 @@ def file_append(basefile,appender,toppos=True):
 def runthecheck():
     '''
     Elvégezzük az ellenőrzést
-    1-1 megfeleltetés van az input és az output file között 
+    1-1 megfeleltetés van az input és az output file között
+    legeneráljuk a Mimolab fele az eredményfájlt
+    legeneráljuk a kézi eredményfájlokat
+    összesített listát készítünk
+    backupoljuk az adatokat a megfelelő könyvtárakba
+    rendet rakunk magunk után
+
     '''
     msg(tofile=_DebugToFile)
     matched=findMatchedInOutFile()
@@ -521,9 +527,16 @@ def runthecheck():
                     position=line[0]
                     plateID=line[1]
                     nameanddate=line[2]
-                    Name_hely=nameanddate.split("#")[0]
-                    Name_datum=nameanddate.split("#")[1]
-                    
+                    try:
+                        # ha nincs kitöltve a dátum akkor még ne adjuk fel 
+                        Name_hely=nameanddate.split("#")[0]
+                        Name_datum=nameanddate.split("#")[1]
+                    except:
+                        msg("Hiba a descriptor szeletelésben ", tofile=_DebugToFile)
+                        Name_datum="99991231"
+                        Name_hely=nameanddate
+                    Name_datum=Name_datum[0:4]+"."+Name_datum[4:6]+"."+Name_datum[6:]   # átalakítjuk a dátumot a magyar helyesírás szerintire 
+
                     sampleType=line[3]
                     PrepProt=line[4]
                     Description=line[5]
