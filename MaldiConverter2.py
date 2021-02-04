@@ -19,7 +19,7 @@ _ResultEnd = "_RESULT"
 _site_kezi_dir_End="_kezi"
 _site_allfile_prefix="!"
 _site_allfile_postfix="_all"
-
+_pathprefix="C:\\"    # hálózati környezetben "\\\\" !!
 '''
 DIRECTORY definitions
 '''
@@ -28,10 +28,10 @@ state="DEV"
 
 _Basedirectory="C:\\Maldi\\Maldi2-master"
 
-_Backupdirectory="\\\\hungary\dfsroot\\Maldi_Backups\\"+state            # 2021.02.03
+_Backupdirectory=_pathprefix+"hungary\dfsroot\\Maldi_Backups\\"+state            # 2021.02.03
 # -----------------------------------------------------------------------------------
-_Indirectory="\\\\hungary\\dfsroot\\Maldi_eredmenyek\\"+state+"\\MIMOLAB"
-_Resultdirectory="\\\\hungary\\dfsroot\\Maldi_eredmenyek\\"+state+"\\MIMOLAB" #"/RESULT"
+_Indirectory=_pathprefix+"hungary\\dfsroot\\Maldi_eredmenyek\\"+state+"\\MIMOLAB"
+_Resultdirectory=_pathprefix+"hungary\\dfsroot\\Maldi_eredmenyek\\"+state+"\\MIMOLAB" #"/RESULT"
 
 #------------------------------------------------------------------------------------
 _Outdirectory="\\MaldiOut"
@@ -379,6 +379,20 @@ def moveafile(sourceFile,destpath):
     shutil.move(sourceFile,destpath) 
     msg("file:"+sourceFile+" dest:"+destpath,tofile=_DebugToFile)
     return(0)
+
+def file_append(basefile,appender,toppos=True):
+    tmp_ext="_tmp"
+    base1=loadCSVfile(basefile)
+    app1=loadCSVfile(appender)
+    if toppos:
+        o_list=app1+base1
+    else:
+        o_list=base1+app1
+    writeManualResultFile(os.path.dirname(basefile),os.path.basename(basefile),o_list)
+
+    
+    
+
 
 
 def runthecheck():
