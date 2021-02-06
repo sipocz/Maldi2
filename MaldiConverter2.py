@@ -5,7 +5,7 @@
 # |  1.0: 2020.10.01. Maldiconverte
 # |         Maldi eredmények visszaadása MIMOLAB fele
 # |  
-# |  2.0:  (Validált verzió) 
+# |  2.0: 2020.02.05.  (Validált verzió) 
 # |         Backup könyvtárakba siteonként mentés  
 # |         Területenként összesített adatok készítése
 # |           
