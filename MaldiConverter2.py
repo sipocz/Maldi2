@@ -42,7 +42,7 @@ DIRECTORY definitions
 _Basedirectory="C:\\Maldi\\Maldi2-master"
 
 _Backupdirectory=_pathprefix+"hungary\dfsroot\\Maldi_Backups\\"+state            # 2021.02.03
-_Backupdirectory_root=_pathprefix+"hungary\dfsroot\\Maldi_Backups\\"             # 2021.02.04
+_Backupdirectory_root=_pathprefix+"hungary\dfsroot\\Maldi_Backups"             # 2021.02.04
 
 # -----------------------------------------------------------------------------------
 _Indirectory=_pathprefix+"hungary\\dfsroot\\Maldi_eredmenyek\\"+state+"\\MALDI_INPUT"
@@ -353,14 +353,14 @@ def checkInLine(key, list,column):
     return (None)
 
 
-def writeResultFile(fname,reslist):
+def writeResultFile(fnamein,reslist):
     '''
     Létrehozza az eredményfájlt
-    :param fname: a készítendő file neve, a könyvtárnévvel automatikusan kiegészítésre kerül
+    :param fnamein: a készítendő file neve, a könyvtárnévvel automatikusan kiegészítésre kerül
     :param reslist: lista a file elemeiről
     :return:  None
     '''
-    fname=_DirectoryResult+"\\"+fname
+    fname=_DirectoryResult+"\\"+fnamein
     f=open(fname,"w")
     for line in reslist:
         for field in line:
@@ -368,15 +368,17 @@ def writeResultFile(fname,reslist):
         print("",file=f)
     f.close()
 
-def writeManualResultFile(Directory,fname,reslist):
+def writeManualResultFile(Directory,fnamein,reslist):
     '''
     Létrehozza az eredményfájlt
-    :param fname: a készítendő file neve, a könyvtárnévvel automatikusan kiegészítésre kerül
+    :param fnamein: a készítendő file neve, a könyvtárnévvel automatikusan kiegészítésre kerül
     :param reslist: lista a file elemeiről
     :return:  None
     '''
     msg(tofile=_DebugToFile)
-    fname=Directory+"\\"+fname
+    print("Directory:",Directory)
+    fname=Directory+"\\"+fnamein
+    print("Fname:",fname)
     f=open(fname,"w", encoding="Latin")  # latin van itt, 
     for line in reslist:
         for field in line:
@@ -499,7 +501,7 @@ def runthecheck():
                 if plate in infilename:                                         # megtaláltuk a plate azonosítót
                     selectedsite=plates[plate]                                  # ez a site neve
                     # pl.: \\hungary\dfsroot\maldi_backups\prd\Debrecen_kezi\Y_2021
-                    destpath=_Backupdirectory_root+"\\"+state+"\\"+selectedsite+"\\"+currentyear                 # ez a backup könyvtár neve site névvel kiegészítve
+                    destpath=_Backupdirectory_root+"\\"+state+"\\"+"MIMOLAB"+"\\"+selectedsite+"\\"+currentyear                 # ez a backup könyvtár neve site névvel kiegészítve
                     writeManualResultFile(destpath,resultfilename,resultlist)   # resultfile létrehozása ide is
                     
                     moveafile(infilename,destpath)                              # infile másolása
