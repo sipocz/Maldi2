@@ -418,6 +418,21 @@ def moveafile(sourceFile,destpath):
         msg("hiba a file átmozgatásban:"+sourceFile+" dest:"+destpath,tofile=_DebugToFile)
     return(0)
 
+def copyafile(sourceFile,destpath):
+    '''
+    A fájlog átmásolását végzi, hibakezeléssel 
+    return: null
+    '''
+    msg(tofile=_DebugToFile)
+    try:
+        shutil.copy(sourceFile,destpath) 
+        msg("file:"+sourceFile+" dest:"+destpath,tofile=_DebugToFile)
+    except:
+        msg("hiba a file átmásolásban:"+sourceFile+" dest:"+destpath,tofile=_DebugToFile)
+    return(0)
+
+
+
 def file_append(basefile,appender,toppos=True):
     msg(tofile=_DebugToFile)
     tmp_ext="_tmp"
@@ -504,10 +519,10 @@ def runthecheck():
                     destpath=_Backupdirectory_root+"\\"+state+"\\"+"MIMOLAB"+"\\"+selectedsite+"\\"+currentyear                 # ez a backup könyvtár neve site névvel kiegészítve
                     writeManualResultFile(destpath,resultfilename,resultlist)   # resultfile létrehozása ide is
                     
-                    moveafile(infilename,destpath)                              # infile másolása
-                    moveafile(outfilename,destpath)                             # outfile másolása
+                    copyafile(infilename,destpath)                              # infile másolása #20210208 move -> copy 
+                    copyafile(outfilename,destpath)                             # outfile másolása #20210208 move -> copy
                     pdfname=outfilename[:-3]+"pdf"
-                    moveafile(pdfname,destpath)                                 # pdf másolása    
+                    copyafile(pdfname,destpath)                                 # pdf másolása  #20210208 move -> copy  
                     
                     # MIMOLAB fele menő adatokat nem rakunk ott össze mert ezek megjelennek a site adatai között 
                      
@@ -594,6 +609,7 @@ def runthecheck():
 msg(tofile=_DebugToFile)
 
 
-msg("MALDI Converter Started",tofile=_DebugToFile)
+msg("MALDI Converter Start",tofile=_DebugToFile)
 plates=loadplates()
 runthecheck()  
+msg("MALDI Converter End",tofile=_DebugToFile)
