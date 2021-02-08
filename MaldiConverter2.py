@@ -2,7 +2,7 @@
 # |  Maldiconverter   
 # | 
 # |  Sipőcz László   
-# |  1.0: 2020.10.01. Maldiconverte
+# |  1.0: 2020.10.01. Maldiconverter
 # |         Maldi eredmények visszaadása MIMOLAB fele
 # |  
 # |  2.0: 2020.02.05.  (Validált verzió) 
